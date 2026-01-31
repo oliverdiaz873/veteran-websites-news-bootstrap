@@ -1,0 +1,312 @@
+/* Main CSS - NewsHub */
+
+/* Variables */
+:root {
+    --primary-color: #2196f3;
+    --secondary-color: #ff6b6b;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+    --text-muted: #6c757d;
+    --border-radius: 0.5rem;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Base styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+/* Header */
+.logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Main content */
+.main-content {
+    min-height: calc(100vh - 200px);
+    padding: 0 2rem;
+}
+
+/* Breaking news banner */
+.breaking-news {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+}
+
+/* Featured news section */
+.featured-news {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+}
+
+/* noticia 1 */
+.featured-article {
+    transition: var(--transition);
+    width: 100%;
+}
+
+.featured-article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.featured-article .image-wrapper {
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.featured-article img {
+    transition: var(--transition);
+}
+
+.featured-article:hover img {
+    transform: scale(1.05);
+}
+
+.side-featured article {
+    transition: var(--transition);
+}
+
+.side-featured article:hover {
+    transform: translateY(-2px);
+}
+
+/* News cards */
+.news-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    height: 100%;
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.news-card img {
+    transition: var(--transition);
+}
+
+.news-card:hover img {
+    transform: scale(1.05);
+}
+
+.news-card h3,
+.news-card h4,
+.news-card h5 {
+    transition: var(--transition);
+}
+
+.news-card:hover h3,
+.news-card:hover h4,
+.news-card:hover h5 {
+    color: var(--primary-color);
+}
+
+/* titulos */
+.section-title {
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* News meta info */
+.fecha-noticia {
+    font-style: italic;
+}
+
+/* Load more button */
+.btn-outline-primary {
+    border-width: 2px;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    transition: var(--transition);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .featured-article h1 {
+        font-size: 1.5rem;
+    }
+
+    .featured-article .lead {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .featured-news {
+        padding: 1rem;
+    }
+
+    .news-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus styles */
+a:focus,
+button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+
+    .navbar,
+    .breaking-news,
+    .btn {
+        display: none;
+    }
+
+    .news-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* Sidebar */
+.aside-sidebar {
+    /* Eliminado position: sticky para que desplace junto con el contenido */
+}
+
+/* Publicidad */
+.aside-publicidad {
+    background: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.ad-container {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.ad-container .imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: adRotate 12s infinite;
+}
+
+.ad1 {
+    background-image: url('../images/publicidad/publicidad-iphone.jpg');
+    animation-delay: 0s !important;
+}
+
+.ad2 {
+    background-image: url('../images/publicidad/publicidad-KFC.jpg');
+    animation-delay: 4s !important;
+}
+
+.ad3 {
+    background-image: url('../images/publicidad/publicidad-chocolate.jpg');
+    animation-delay: 8s !important;
+}
+
+@keyframes adRotate {
+
+    0%,
+    25% {
+        opacity: 1;
+    }
+
+    33.33%,
+    91.66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Opinion Section */
+.opinion {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.opinion-card {
+    transition: var(--transition);
+}
+
+.opinion-card:hover {
+    transform: translateX(5px);
+}
+
+.opinion-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.opinion-card h4 {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.3;
+}
+
+.opinion-card:hover h4 {
+    color: var(--primary-color);
+}

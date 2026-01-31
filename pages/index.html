@@ -40,8 +40,10 @@
 
 <body>
 
-          <!--Bootstrap Navbar : Supported content -->
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <!-- Header Global -->
+          <header class="header-main sticky-top">
+              <!--Bootstrap Navbar : Supported content -->
+              <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <div class="navbar-brand">
                 <a href="index.html" aria-label="Ir a la página principal de NewsHub" class="text-decoration-none text-dark d-flex align-items-center gap-2">
@@ -91,6 +93,294 @@
               </div>
             </div>
           </nav>
+          </header>
+
+
+    <!-- Main -->
+    <main class="main-content">
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <!-- Main Content Column -->
+                <div class="col-lg-9">
+
+            <!-- Breaking News Banner -->
+            <section class="breaking-news bg-danger text-white p-3 mb-4 rounded">
+                <div class="d-flex align-items-center">
+                    <span class="badge bg-dark me-3">ÚLTIMA HORA</span>
+                    <marquee behavior="scroll" direction="left">
+                        <strong>Noticia de última hora: Evento importante que acaba de ocurrir en la ciudad</strong>
+                    </marquee>
+                </div>
+            </section>
+
+            <!-- Featured News -->
+            <section class="featured-news mb-5">
+                <h2 class="section-title mb-3">Noticias Destacadas</h2>
+                <div class="row g-3">
+                    <!-- Noticia 1 Destacada - Principal -->
+                    <div class="col-lg-8">
+                        <article class="featured-article">
+                            <a href="noticias/economia/noticia-de-la-inflacion.html" aria-label="Leer noticia: Incremento de la inflación impacta a los mercados" class="text-decoration-none text-dark">
+                                <div class="image-wrapper">
+                                    <img src="../assets/images/news/economia/inflacion.jpg" alt="Incremento de la inflación impacta a los mercados" loading="lazy" class="img-fluid rounded mb-3">
+                                </div>
+                                <h1 class="h2 mb-3">Incremento de la inflación impacta a los mercados</h1>
+                                <p class="text-muted mb-2">
+                                    <small>Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Economía</small>
+                                </p>
+                                <p class="lead">
+                                    El aumento sostenido de la inflación genera incertidumbre en los mercados financieros y afecta el poder adquisitivo de los ciudadanos. Los precios de productos básicos y servicios esenciales continúan incrementándose, obligando a empresas y familias a ajustar presupuestos. Analistas advierten que, de no implementarse políticas económicas efectivas, esta tendencia podría persistir, impactando la inversión, el empleo y la estabilidad económica del país a mediano plazo.
+                                </p>
+                            </a>
+                        </article>
+                    </div>
+                    
+                    <!-- Noticia 2 - Secundaria -->
+                    <div class="col-lg-4">
+                        <div class="side-featured">
+                            <article class="mb-2">
+                                <a href="noticias/deporte/noticia-del-equipo-local.html" aria-label="Leer noticia: Gran victoria del equipo local" class="text-decoration-none text-dark">
+                                    <img src="../assets/images/news/deporte/futbol.jpg" alt="Gran victoria del equipo local" loading="lazy" class="img-fluid rounded mb-1">
+                                    <h4 class="h5">Gran victoria del equipo local</h4>
+                                    <p class="text-muted small">Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Deporte</p>
+                                    <p>El equipo local consiguió una importante victoria que lo acerca a la clasificación tras un intenso partido.</p>
+                                </a>
+                            </article>
+                            
+                            <article>
+                                <a href="noticias/internacional/noticia-de-guerra.html" aria-label="Leer noticia: La guerra de Ucrania llega a su fin" class="text-decoration-none text-dark">
+                                    <img src="../assets/images/news/internacional/guerra.jpg" alt="La guerra de Ucrania llega a su fin" loading="lazy" class="img-fluid rounded mb-2">
+                                    <h4 class="h5">La guerra de Ucrania llega a su fin</h4>
+                                    <p class="text-muted small">Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Internacional</p>
+                                    <p>Tras meses de negociaciones diplomáticas, el conflicto llega a su fin generando expectativas de estabilidad y reconstrucción en la región.</p>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Grid de noticias restantes -->
+                <div class="row g-3">
+                    <!-- Noticia 4 -->
+                    <div class="col-lg-4 mb-4">
+                        <article class="news-card">
+                            <a href="noticias/politica/noticia-de-protestas.html" aria-label="Leer noticia: Protestas por corrupción en el país" class="text-decoration-none text-dark">
+                                <img src="../assets/images/news/politica/protestas.jpg" alt="Protestas por corrupción en el país" loading="lazy" class="img-fluid rounded mb-3">
+                                <h3 class="h5">Protestas por corrupción</h3>
+                                <p class="text-muted small mb-2">Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Política</p>
+                                <p>Miles de ciudadanos se manifestaron en distintas ciudades exigiendo transparencia y sanciones contra los responsables.</p>
+                            </a>
+                        </article>
+                    </div>
+                    
+                    <!-- Noticia 5 -->
+                    <div class="col-lg-4 mb-4">
+                        <article class="news-card">
+                            <a href="noticias/salud/noticia-del-virus.html" aria-label="Leer noticia: Descubren un nuevo virus que alerta a científicos" class="text-decoration-none text-dark">
+                                <img src="../assets/images/news/salud/virus.jpg" alt="Descubren un nuevo virus que alerta a científicos" loading="lazy" class="img-fluid rounded mb-3">
+                                <h3 class="h5">Descubren un nuevo virus que alerta a científicos</h3>
+                                <p class="text-muted small mb-2">Publicado el <time datetime="2025-10-09">9 de octubre de 2025</time> | Salud</p>
+                                <p>Investigadores internacionales analizan un nuevo virus que podría representar un riesgo para la salud pública global.</p>
+                            </a>
+                        </article>
+                    </div>
+                    
+                    <!-- Noticia 6 -->
+                    <div class="col-lg-4 mb-4">
+                        <article class="news-card">
+                            <a href="noticias/justicia/noticia-del-homicidio.html" aria-label="Leer noticia: Investigan homicidio en el centro de la ciudad" class="text-decoration-none text-dark">
+                                <img src="../assets/images/news/justicia/homicidio.jpg" alt="Investigan homicidio en el centro de la ciudad" loading="lazy" class="img-fluid rounded mb-3">
+                                <h3 class="h5">Investigan homicidio en el centro de la ciudad</h3>
+                                <p class="text-muted small mb-2">Publicado el <time datetime="2025-10-11">11 de octubre de 2025</time> | Justicia</p>
+                                <p>Las autoridades iniciaron una investigación para esclarecer las circunstancias del crimen ocurrido en una zona concurrida.</p>
+                            </a>
+                        </article>
+                    </div>
+                    
+                    <!-- Noticia 7 -->
+                    <div class="col-lg-4 mb-4">
+                        <article class="news-card">
+                            <a href="noticias/clima/noticia-sobre-huracan.html" aria-label="Huracán se fortalece en el Atlántico y genera alertas en la costa este de EE.UU." class="text-decoration-none text-dark">
+                                <img src="../assets/images/news/clima/ciclon.jpg" alt="Huracán se fortalece en el Atlántico y genera alertas en la costa este de EE.UU." loading="lazy" class="img-fluid rounded mb-3">
+                                <h3 class="h5">Huracán se fortalece en el Atlántico y genera alertas en la costa este de EE.UU.</h3>
+                                <p class="text-muted small mb-2">Publicado el <time datetime="2025-10-11">11 de octubre de 2025</time> | Clima</p>
+                                <p>El fenómeno meteorológico continúa intensificándose y obliga a emitir alertas preventivas en varias zonas costeras.</p>
+                            </a>
+                        </article>
+                    </div>
+                    
+                    <!-- Noticia 8 -->
+                    <div class="col-lg-4 mb-4">
+                        <article class="news-card">
+                            <a href="noticias/justicia/noticia-del-fraude.html" aria-label="Detienen a exfuncionario acusado de fraude financiero millonario" class="text-decoration-none text-dark">
+                                <img src="../assets/images/news/justicia/arrested.jpg" alt="Detienen a exfuncionario acusado de fraude financiero millonario" loading="lazy" class="img-fluid rounded mb-3">
+                                <h3 class="h5">Detienen a exfuncionario acusado de fraude financiero millonario</h3>
+                                <p class="text-muted small mb-2">Publicado el <time datetime="2025-10-11">11 de octubre de 2025</time> | Justicia</p>
+                                <p>El exfuncionario fue arrestado tras ser vinculado a un esquema de fraude que habría causado pérdidas millonarias al Estado.</p>
+                            </a>
+                        </article>
+                    </div>
+                    
+                    <!-- Noticia 9 -->
+                    <div class="col-lg-4 mb-4">
+                        <article class="news-card">
+                            <a href="noticias/economia/noticia-de-la-bolsa.html" aria-label="La bolsa de valores cierra en alza tras jornada de optimismo inversor" class="text-decoration-none text-dark">
+                                <img src="../assets/images/news/economia/bolsa-de-valores.avif" alt="La bolsa de valores cierra en alza tras jornada de optimismo inversor" loading="lazy" class="img-fluid rounded mb-3">
+                                <h3 class="h5">La bolsa de valores cierra en alza tras jornada de optimismo inversor</h3>
+                                <p class="text-muted small mb-2">Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Economía</p>
+                                <p>Los mercados cerraron la jornada con ganancias impulsadas por el optimismo de los inversores y buenos indicadores económicos.</p>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Latest News Grid -->
+            <section class="latest-news mb-5">
+                <h2 class="section-title mb-4">Últimas Noticias</h2>
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <article class="news-card">
+                            <img src="https://via.placeholder.com/400x250" class="img-fluid rounded mb-3" alt="Noticia">
+                            <h3 class="h5">
+                                <a href="article.html" class="text-decoration-none text-dark">
+                                    Título de noticia reciente en categoría nacional
+                                </a>
+                            </h3>
+                            <p class="text-muted small mb-2">Nacional | Hace 1 hora</p>
+                            <p>Breve descripción de la noticia que engancha al lector...</p>
+                        </article>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <article class="news-card">
+                            <img src="https://via.placeholder.com/400x250" class="img-fluid rounded mb-3" alt="Noticia">
+                            <h3 class="h5">
+                                <a href="article.html" class="text-decoration-none text-dark">
+                                    Título de noticia internacional importante
+                                </a>
+                            </h3>
+                            <p class="text-muted small mb-2">Internacional | Hace 2 horas</p>
+                            <p>Resumen de la noticia internacional relevante...</p>
+                        </article>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <article class="news-card">
+                            <img src="https://via.placeholder.com/400x250" class="img-fluid rounded mb-3" alt="Noticia">
+                            <h3 class="h5">
+                                <a href="article.html" class="text-decoration-none text-dark">
+                                    Noticia sobre tecnología y innovación
+                                </a>
+                            </h3>
+                            <p class="text-muted small mb-2">Tecnología | Hace 4 horas</p>
+                            <p>Información sobre el último avance tecnológico...</p>
+                        </article>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <article class="news-card">
+                            <img src="https://via.placeholder.com/400x250" class="img-fluid rounded mb-3" alt="Noticia">
+                            <h3 class="h5">
+                                <a href="article.html" class="text-decoration-none text-dark">
+                                    Resultados deportivos del día
+                                </a>
+                            </h3>
+                            <p class="text-muted small mb-2">Deportes | Hace 6 horas</p>
+                            <p>Cobertura de los eventos deportivos más importantes...</p>
+                        </article>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <article class="news-card">
+                            <img src="https://via.placeholder.com/400x250" class="img-fluid rounded mb-3" alt="Noticia">
+                            <h3 class="h5">
+                                <a href="article.html" class="text-decoration-none text-dark">
+                                    Evento cultural en la ciudad
+                                </a>
+                            </h3>
+                            <p class="text-muted small mb-2">Cultura | Hace 8 horas</p>
+                            <p>Información sobre actividades culturales locales...</p>
+                        </article>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <article class="news-card">
+                            <img src="https://via.placeholder.com/400x250" class="img-fluid rounded mb-3" alt="Noticia">
+                            <h3 class="h5">
+                                <a href="article.html" class="text-decoration-none text-dark">
+                                    Actualidad económica del país
+                                </a>
+                            </h3>
+                            <p class="text-muted small mb-2">Economía | Hace 10 horas</p>
+                            <p>Análisis de la situación económica actual...</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Load More Button -->
+            <div class="text-center mb-5">
+                <button class="btn btn-outline-primary btn-lg">Cargar más noticias</button>
+            </div>
+        </div>
+
+        <!-- Sidebar Column -->
+        <div class="col-lg-3">
+                    <aside class="aside-sidebar">
+                        <!-- Publicidad -->
+                        <div class="aside-publicidad" aria-label="Publicidad" role="complementary">
+                            <h3 class="section-title h5 mb-3">Publicidad</h3>
+                            <div class="ad-container">
+                                <!-- divs rotativos con las imagenes de publicidad de fondo -->
+                                <div class="imagen ad1" aria-hidden="true"></div>
+                                <div class="imagen ad2" aria-hidden="true"></div>           
+                                <div class="imagen ad3" aria-hidden="true"></div>
+                            </div>
+                        </div>
+
+                        <!-- Sección Opinión -->
+                        <section class="opinion mt-3">
+                            <h3 class="section-title h5 mb-3">Opinión</h3>
+
+                            <article class="opinion-card mb-4">
+                                <a href="opiniones/opinion-politica.html" class="text-decoration-none text-dark">
+                                    <img src="../assets/images/news/politica/congreso.avif" alt="La democracia y el reto de la transparencia" loading="lazy" class="img-fluid rounded mb-2">
+                                    <h4 class="h6 fw-bold">La democracia y el reto de la transparencia</h4>
+                                    <p class="small text-muted">
+                                        La confianza ciudadana depende cada vez más de instituciones
+                                        abiertas y responsables.
+                                    </p>
+                                </a>
+                            </article>
+
+                            <article class="opinion-card mb-4">
+                                <a href="opiniones/opinion-economia.html" class="text-decoration-none text-dark">
+                                    <img src="../assets/images/opiniones/opinion_economia.jpg" alt="¿Hacia dónde va la economía global?" loading="lazy" class="img-fluid rounded mb-2">
+                                    <h4 class="h6 fw-bold">¿Hacia dónde va la economía global?</h4>
+                                    <p class="small text-muted">
+                                        Analizamos los factores que marcarán el rumbo económico
+                                        en los próximos años.
+                                    </p>
+                                </a>
+                            </article>
+
+                            <article class="opinion-card mb-4">
+                                <a href="opiniones/opinion-salud.html" class="text-decoration-none text-dark">
+                                    <img src="../assets/images/news/salud/antibioticos.avif" alt="La importancia de la salud preventiva" loading="lazy" class="img-fluid rounded mb-2">
+                                    <h4 class="h6 fw-bold">La importancia de la salud preventiva</h4>
+                                    <p class="small text-muted">
+                                        Invertir en prevención es fundamental para mantener una
+                                        población saludable y reducir gastos sanitarios.
+                                    </p>
+                                </a>
+                            </article>
+                        </section>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
 
 
   

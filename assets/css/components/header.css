@@ -7,8 +7,21 @@ h1 {
 }
 
 /* Navbar Styles */
+.header-main.sticky-top {
+    background: white;
+    z-index: 1020;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+}
+
+.navbar.sticky-top {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white !important;
+}
+
 .navbar {
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
@@ -44,7 +57,7 @@ h1 {
 
 /* Hover */
 .navbar-nav .nav-link:hover {
-     color: #dc3545 !important;
+    color: #dc3545 !important;
 }
 
 /* Active */
@@ -68,7 +81,7 @@ h1 {
         font-style: italic;
         display: none !important;
     }
-    
+
     .form-control.show {
         display: block !important;
     }
