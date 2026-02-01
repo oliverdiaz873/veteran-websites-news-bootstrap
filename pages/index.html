@@ -47,7 +47,7 @@
             <div class="container-fluid">
               <div class="navbar-brand">
                 <a href="index.html" aria-label="Ir a la página principal de NewsHub" class="text-decoration-none text-dark d-flex align-items-center gap-2">
-                  <img src="../assets/images/logo/logo.jpg" alt="Logo NewsHub" class="logo">
+                  <img src="../assets/images/logo/logo.jpg" alt="Logo NewsHub" class="logo" loading="lazy">
                   <h1 class="d-inline-block mb-0">NewsHub</h1>
                 </a>
               </div>
@@ -107,59 +107,68 @@
             <section class="breaking-news bg-danger text-white p-2 mb-2 rounded">
                 <div class="d-flex align-items-center">
                     <span class="badge bg-dark me-3">ÚLTIMA HORA</span>
-                    <marquee behavior="scroll" direction="left">
-                        <strong>Noticia de última hora: Evento importante que acaba de ocurrir en la ciudad</strong>
-                    </marquee>
+                    <div class="breaking-news-content">
+                        <span class="breaking-news-text">Noticia de última hora: Evento importante que acaba de ocurrir en la ciudad</span>
+                    </div>
                 </div>
             </section>
 
             <!-- Featured News -->
             <section class="featured-news mb-5">
                 <h2 class="section-title mb-3">Noticias Destacadas</h2>
-                <div class="row g-3">
+                <div class="row">
                     <!-- Noticia 1 Destacada - Principal -->
-                    <div class="col-lg-8">
+                    <div class="col-12 mb-2">
                         <article class="featured-article">
                             <a href="noticias/economia/noticia-de-la-inflacion.html" aria-label="Leer noticia: Incremento de la inflación impacta a los mercados" class="text-decoration-none text-dark">
-                                <div class="image-wrapper">
-                                    <img src="../assets/images/news/economia/inflacion.jpg" alt="Incremento de la inflación impacta a los mercados" loading="lazy" class="img-fluid rounded mb-3">
+                                <div class="d-flex align-items-start gap-3">
+                                    <div class="content">
+                                        <h3 class="h3 mb-3">Incremento de la inflación impacta a los mercados</h3>
+                                        <p class="text-muted mb-2">
+                                            <small>Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Economía</small>
+                                        </p>
+                                        <p class="fs-6">
+                                            El aumento sostenido de la inflación genera incertidumbre en los mercados financieros y afecta el poder adquisitivo de los ciudadanos. Los precios de productos básicos y servicios esenciales continúan incrementándose, obligando a empresas y familias a ajustar presupuestos. Analistas advierten que, de no implementarse políticas económicas efectivas, esta tendencia podría persistir, impactando la inversión, el empleo y la estabilidad económica del país a mediano plazo.
+                                        </p>
+                                    </div>
+                                    <div class="image-wrapper">
+                                        <img src="../assets/images/news/economia/inflacion.jpg" alt="Incremento de la inflación impacta a los mercados" class="img-fluid rounded">
+                                    </div>
                                 </div>
-                                <h1 class="h2 mb-3">Incremento de la inflación impacta a los mercados</h1>
+                            </a>
+                        </article>
+                    </div>
+                    
+                    <!-- Noticia 2 y 3 - Destacadas horizontales -->
+                    <div class="col-lg-8 mb-4">
+                        <article class="news-card">
+                            <a href="noticias/deporte/noticia-del-equipo-local.html" aria-label="Leer noticia: Gran victoria del equipo local" class="text-decoration-none text-dark">
+                                <img src="../assets/images/news/deporte/futbol.jpg" alt="Gran victoria del equipo local" loading="lazy" class="img-fluid rounded mb-3">
+                                <h3 class="h3 mb-3">Gran victoria del equipo local</h3>
                                 <p class="text-muted mb-2">
-                                    <small>Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Economía</small>
+                                    <small>Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Deporte</small>
                                 </p>
-                                <p class="lead">
-                                    El aumento sostenido de la inflación genera incertidumbre en los mercados financieros y afecta el poder adquisitivo de los ciudadanos. Los precios de productos básicos y servicios esenciales continúan incrementándose, obligando a empresas y familias a ajustar presupuestos. Analistas advierten que, de no implementarse políticas económicas efectivas, esta tendencia podría persistir, impactando la inversión, el empleo y la estabilidad económica del país a mediano plazo.
+                                <p class="fs-6">
+                                    El equipo local consiguió una importante victoria que lo acerca a la clasificación tras un intenso partido. Los jugadores mostraron un rendimiento excepcional, con goles decisivos y una defensa sólida que mantuvo al rival en constante presión durante todo el encuentro.
                                 </p>
                             </a>
                         </article>
                     </div>
                     
-                    <!-- Noticia 2 - Secundaria -->
+                    <!-- Noticia 3 - Secundaria -->
                     <div class="col-lg-4">
-                        <div class="side-featured">
-                            <article class="mb-2">
-                                <a href="noticias/deporte/noticia-del-equipo-local.html" aria-label="Leer noticia: Gran victoria del equipo local" class="text-decoration-none text-dark">
-                                    <img src="../assets/images/news/deporte/futbol.jpg" alt="Gran victoria del equipo local" loading="lazy" class="img-fluid rounded mb-1">
-                                    <h4 class="h5">Gran victoria del equipo local</h4>
-                                    <p class="text-muted small">Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Deporte</p>
-                                    <p>El equipo local consiguió una importante victoria que lo acerca a la clasificación tras un intenso partido.</p>
-                                </a>
-                            </article>
-                            
-                            <article>
-                                <a href="noticias/internacional/noticia-de-guerra.html" aria-label="Leer noticia: La guerra de Ucrania llega a su fin" class="text-decoration-none text-dark">
-                                    <img src="../assets/images/news/internacional/guerra.jpg" alt="La guerra de Ucrania llega a su fin" loading="lazy" class="img-fluid rounded mb-2">
-                                    <h4 class="h5">La guerra de Ucrania llega a su fin</h4>
-                                    <p class="text-muted small">Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Internacional</p>
-                                    <p>Tras meses de negociaciones diplomáticas, el conflicto llega a su fin generando expectativas de estabilidad y reconstrucción en la región.</p>
-                                </a>
-                            </article>
-                        </div>
+                        <article class="news-card">
+                            <a href="noticias/internacional/noticia-de-guerra.html" aria-label="Leer noticia: La guerra de Ucrania llega a su fin" class="text-decoration-none text-dark">
+                                <img src="../assets/images/news/internacional/guerra.jpg" alt="La guerra de Ucrania llega a su fin" loading="lazy" class="img-fluid rounded mb-2">
+                                <h3 class="h5">La guerra de Ucrania llega a su fin</h3>
+                                <p class="text-muted small">Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Internacional</p>
+                                <p>Tras meses de negociaciones diplomáticas, el conflicto llega a su fin generando expectativas de estabilidad y reconstrucción en la región.</p>
+                            </a>
+                        </article>
                     </div>
                 </div>
                 
-                <!-- Grid de noticias restantes -->
+                <!-- Grid de noticias restantes - 3 columnas -->
                 <div class="row">
                     <!-- Noticia 4 -->
                     <div class="col-lg-4 mb-4">
@@ -319,10 +328,6 @@
                 </div>
             </section>
 
-            <!-- Load More Button -->
-            <div class="text-center mb-5">
-                <button class="btn btn-outline-primary btn-lg">Cargar más noticias</button>
-            </div>
         </div>
 
         <!-- Sidebar Column -->
@@ -371,6 +376,37 @@
             </div>
         </div>
     </main>
+
+
+     <!-- Footer Global -->
+     <footer class="footer-main"> 
+         <div class="container-fluid footer-content">
+              <!-- Derechos reservados -->
+              <small>&copy; 2026 NewsHub. Todos los derechos reservados.</small>
+
+              <!-- Íconos de redes sociales -->
+              <div class="social-icons">
+                   <a href="https://facebook.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
+                    <i class="bi bi-facebook"></i>
+                   </a>
+
+                   <a href="https://twitter.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
+                    <i class="bi bi-twitter-x"></i>
+                   </a>
+
+                   <a href="https://instagram.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
+                    <i class="bi bi-instagram"></i>
+                   </a>
+              </div>
+
+                 <!-- Enlaces legales -->
+                <div class="footer-links">
+                  <a href="legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a> |
+                  <a href="legal/terms.html" title="Términos de Uso">Términos de Uso</a>
+                </div>
+            </div>
+
+    </footer>
 
 
   

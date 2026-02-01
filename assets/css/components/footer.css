@@ -1,0 +1,91 @@
+/* ======================== FOOTER GLOBAL ======================== */
+
+/* Footer - Mobile First */
+footer {
+    color: white;
+    padding: 20px;
+    margin: 0;  /* Eliminar márgenes para que cubra todo su contenedor */
+    text-align: center;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0.85);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+}
+
+.social-icons i {
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2);
+    color: #ffcc00;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive para tablet y desktop */
+@media (min-width: 768px) {
+    footer {
+        padding: 15px 0px 25px;  /* Agregar padding superior para separación en tablet */
+        font-size: 18px;
+    }
+    
+    .footer-content {
+        gap: 15px;
+    }
+    
+    .social-icons i {
+        font-size: 28px;
+    }
+    
+    .footer-links a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+}
+
+/* Responsive para desktop grande */
+@media (min-width: 1024px) {
+    footer {
+        padding: 20px 30px 30px;  /* Agregar padding superior para separación */
+        font-size: 18px;
+    }
+    
+    .footer-content {
+        flex-direction: column; /* Mantener layout vertical como en móvil */
+        gap: 20px; /* Aumentar separación vertical */
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .social-icons i {
+        font-size: 32px; /* Iconos un poco más grandes en desktop */
+    }
+    
+    .footer-links a {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+}
+
+

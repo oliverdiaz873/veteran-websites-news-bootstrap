@@ -62,6 +62,53 @@ body {
 .featured-article {
     transition: var(--transition);
     width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.featured-article .content {
+    flex: 0 0 35%;
+    max-width: 35%;
+}
+
+.featured-article .image-wrapper {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.featured-article .image-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.featured-article .lead {
+    font-size: 16px !important;
+    line-height: 1.5;
+}
+
+/* Responsive para móvil, tablet e iPad Pro - noticia 1 vertical */
+@media (max-width: 1200px) {
+    .featured-article .d-flex {
+        flex-direction: column !important;
+        gap: 1rem;
+    }
+    
+    .featured-article .content,
+    .featured-article .image-wrapper {
+        flex: 1 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    .featured-article .image-wrapper {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+    
+    .featured-article .content {
+        order: 1;
+    }
 }
 
 .featured-article:hover {
