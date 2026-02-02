@@ -85,6 +85,7 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
+    padding: 10px;
 }
 
 .featured-article .content {
@@ -165,7 +166,7 @@ body {
     box-shadow: var(--box-shadow);
     transition: var(--transition);
     height: 100%;
-    padding: 0px 2px;
+    padding: 10px;
 }
 
 .news-card:hover {
@@ -187,10 +188,18 @@ body {
     transition: var(--transition);
 }
 
+/* hover de titulos de tarjetas de noticias */
 .news-card:hover h3,
 .news-card:hover h4,
-.news-card:hover h5 {
-    color: var(--primary-color);
+.news-card:hover h5,
+.news-card:hover h6 {
+    color: #dc3545; /* Hover de títulos de tarjetas - rojo */
+}
+
+/* hover de titulos de seccion opinion */
+.opinion-card:hover h4,
+.opinion-card:hover h6 {
+    color: #dc3545; /* Hover de títulos de opinion - rojo */
 }
 
 /* titulos */
@@ -352,14 +361,38 @@ button:focus {
     padding: 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    border-left: 1.5px solid #ddd; /* Borde izquierdo como separación */
 }
+
+/* Margen para tablets (iPad Air, Surface Pro 7) de separación entre seccion opinion y footer */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .opinion {
+        margin-bottom: 2rem; /* Separación del footer en tablets */
+    }
+}
+
+/* Margin-top solo para el enlace "Inicio" en móviles */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link:first-child {
+        margin-top: 0.6rem !important;
+    }
+}
+
+
+
 
 .opinion-card {
     transition: var(--transition);
+    padding: 8px;
 }
 
 .opinion-card:hover {
     transform: translateX(5px);
+}
+
+.opinion-card h4,
+.opinion-card h6 {
+    transition: var(--transition);
 }
 
 .opinion-card img {
@@ -372,8 +405,4 @@ button:focus {
     margin-top: 0.5rem;
     font-size: 0.95rem;
     line-height: 1.3;
-}
-
-.opinion-card:hover h4 {
-    color: var(--primary-color);
 }
