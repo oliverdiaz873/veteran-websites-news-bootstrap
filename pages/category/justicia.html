@@ -16,163 +16,292 @@
     <meta property="og:title" content="NewsHub - justicia al instante">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://localhost/newsHub-justicia"> <!-- URL real de la sección -->
-    <meta property="og:image" content="imagenes/justicia-banner.png"> 
+    <meta property="og:image" content="imagenes/justicia-banner.png"> <!-- imagen representativa de justicia -->
     <meta property="og:description" content="Mantente informado sobre juicios, leyes y decisiones judiciales en NewsHub.">
     <meta property="og:site_name" content="NewsHub">
     <meta property="og:locale" content="es_ES">
 
+    <!--  Twitter Cards para X-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NewsHub - Justicia al instante">
+    <meta name="twitter:description" content="Mantente informado sobre juicios, leyes y decisiones judiciales en NewsHub.">
+    <meta name="twitter:image" content="../../assets/images/news/justicia/homicidio.jpg">
 
     <!-- Título y CSS -->
-    <title>NewsHub - Justicia</title>
-    <link rel="stylesheet" href="../css/style.css"/>
+    <title>NewsHub | Tu Fuente de Noticias Confiables</title>
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/dark.css">
+    <link rel="stylesheet" href="../../assets/css/components/header.css">
+    <link rel="stylesheet" href="../../assets/css/components/footer.css">
+    <link rel="stylesheet" href="../../assets/css/pages/categories.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
     <!-- Favicons -->
-    <link rel="icon" href="../imagenes/iconos/favicon/icon-16x16.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="../imagenes/iconos/favicon/icon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="../imagenes/iconos/favicon/icon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="../../assets/images/iconos/favicon/favicon16x16.jpg" type="image/jpg" sizes="16x16">
+    <link rel="icon" href="../../assets/images/iconos/favicon/favicon32x32.jpg" type="image/jpg" sizes="32x32">
+    <link rel="icon" href="../../assets/images/iconos/favicon/favicon48x48.jpg" type="image/jpg" sizes="48x48">
+
+    <!-- scripts -->
+    <script src="../../assets/js/search.js" defer></script>
+    <script src="../../assets/js/main.js" defer></script>
+    <script src="../../assets/js/dark.js" defer></script>
  
   </head>
 
 
    <body>
-           <!--header-->
-          <header>
+            <!-- Header Global -->
+          <header class="header-main sticky-top">
+              <!--Bootstrap Navbar : Supported content -->
+              <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <div class="navbar-brand">
+                <a href="../index.html" aria-label="Ir a la página principal de NewsHub" class="text-decoration-none text-dark d-flex align-items-center gap-2">
+                  <img src="../../assets/images/logo/logo.jpg" alt="Logo NewsHub" class="logo" loading="lazy">
+                  <h1 class="d-inline-block mb-0">NewsHub</h1>
+                </a>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="politica.html">Política</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="internacional.html">Internacional</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="economia.html">Economía</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="salud.html">Salud</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="deporte.html">Deporte</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="clima.html">Clima</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="justicia.html">Justicia</a>
+                  </li>
+                </ul>
+             
+               <!-- input buscador -->
+                <form class="d-flex" role="search">
+                  <input class="form-control me-1" type="search" placeholder="Buscar noticias..." aria-label="Search"/>
+                  <button class="btn btn-outline-primary" type="submit">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </form>
+                
+                <!-- Botón modo oscuro -->
+                <button class="btn btn-outline-primary ms-1" type="button" id="darkModeToggle" aria-label="Cambiar modo oscuro">
+                  <i class="bi bi-brightness-high-fill"></i>
+                </button>
 
-                <h1 class="logo">  
-                    <a href="../index.html" aria-label="Ir a la página principal de NewsHub">  <!-- logo clickeable-->  <!--aria-label proporciona una descripción textual de un elemento para los lectores de pantalla -->
-                        <img src="../imagenes/logo/logo.jpg" alt="Logo NewsHub">
-                          NewsHub 
-                    </a> 
-                </h1>
-               
-              <nav> <!--barra de navegacion-->
-                  <ul> <!--la clase active indica la pagina activa-->
-                    <li><a href="../index.html" class="icon_animation" aria-label="Inicio"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación"> Inicio</a></li>
-                    <li><a href="politica.html" class="icon_animation" aria-label="Sección Política"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación"> Política</a></li>
-                    <li><a href="internacional.html" class="icon_animation" aria-label="Sección Internacional"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación"> Internacional</a></li>
-                    <li><a href="economia.html" class="icon_animation" aria-label="Sección Economía"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación"  > Economía</a></li>
-                    <li><a href="salud.html" class="icon_animation" aria-label="Sección Salud"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación" > Salud</a></li>
-                    <li><a href="deporte.html" class="icon_animation" aria-label="Sección Deporte"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación" > Deporte</a></li>
-                    <li><a href="clima.html" class="icon_animation" aria-label="Sección Clima"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación" > Clima</a></li>
-                    <li><a href="justicia.html" class="icon_animation active" aria-label="Sección Justicia"><img src="../imagenes/iconos/nav-icon/go.png" alt="Icono de navegación" > Justicia</a></li>
-                 </ul>
-              </nav>
-              
+              </div>
+            </div>
+          </nav>
           </header>
 
 
-          
           <!--main-->
-          <div class="container">
-          
-               <main>
-                   <h2 class="section-title">Justicia</h2>
-                      <section class="section">
+          <main>
+          <div class="container-fluid mt-3">
+            <div class="row">
+                <!-- Main Content Column -->
+                <div class="col-lg-9">
 
-                          <!-- Noticia 1 -->
-                          <article class="news-card">
-                              <a href="../noticias/justicia/noticia-del-homicidio.html" aria-label="Investigan homicidio en el centro de la ciudad">
-                                 <img src="../imagenes/news/justicia/homicidio.jpg" alt="Investigan homicidio en el centro de la ciudad">
-                                 <h3>Investigan homicidio en el centro de la ciudad</h3>
-                              </a>
-                           </article>
-
-                          <!-- Noticia 2 -->
-                          <article class="news-card">
-                             <a href="../noticias/justicia/noticia-del-tribunal.html" aria-label="Tribunal Supremo confirma sentencia en caso de corrupción política">
-                               <img src="../imagenes/news/justicia/tribunal.jpg" alt="Tribunal Supremo confirma sentencia en caso de corrupción política">
-                              <h3>Tribunal Supremo confirma sentencia en caso de corrupción política</h3>
-                             </a>
-                           </article>
-
-                        <!-- Noticia 3 -->
-                        <article class="news-card">
-                           <a href="../noticias/justicia/noticia-del-fraude.html"  aria-label="Detienen a exfuncionario acusado de fraude financiero millonario">
-                               <img src="../imagenes/news/justicia/arrested.jpg" alt="Detienen a exfuncionario acusado de fraude financiero millonario">
-                               <h3>Detienen a exfuncionario acusado de fraude financiero millonario</h3>
-                           </a>
+            <!-- Featured News -->
+            <section class="featured-news mb-5">
+                <h2 class="section-title mb-3">Justicia</h2>
+                <div class="row">
+                    <!-- Noticia 1 Destacada - Principal -->
+                    <div class="col-12 mb-2">
+                        <article class="featured-article">
+                            <a href="../../news/justicia/noticia-del-homicidio.html" aria-label="Leer noticia: Investigan homicidio en el centro de la ciudad" class="text-decoration-none text-dark">
+                                <div class="d-flex align-items-start gap-3">
+                                    <div class="content">
+                                        <h3 class="h3 mb-3">Investigan homicidio en el centro de la ciudad</h3>
+                                        <p class="text-muted mb-2">
+                                            <small>Publicado el <time datetime="2025-10-11">11 de octubre de 2025</time> | Justicia</small>
+                                        </p>
+                                        <p class="fs-6">
+                                            Las autoridades iniciaron una investigación para esclarecer las circunstancias del crimen ocurrido en una zona concurrida. La policía ha acordonado el área y realiza interrogatorios a testigos potenciales. El fiscal general ha anunciado que se asignarán recursos especiales para resolver el caso rápidamente, mientras la comunidad expresa preocupación por el aumento de la violencia en la zona.
+                                        </p>
+                                    </div>
+                                    <div class="image-wrapper">
+                                        <img src="../../assets/images/news/justicia/homicidio.jpg" alt="Investigan homicidio en el centro de la ciudad" loading="lazy" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                            </a>
                         </article>
+                    </div>
+                    
+                    <!-- Grid de noticias restantes - 3 columnas -->
+                    <div class="row">
+                        <!-- Noticia 2 -->
+                        <div class="col-lg-4 mb-4">
+                            <article class="news-card">
+                                <a href="../../news/justicia/noticia-del-fraude.html" aria-label="Leer noticia: Detienen a exfuncionario acusado de fraude financiero millonario" class="text-decoration-none text-dark">
+                                    <img src="../../assets/images/news/justicia/arrested.jpg" alt="Detienen a exfuncionario acusado de fraude financiero millonario" loading="lazy" class="img-fluid rounded mb-3">
+                                    <h3 class="h5">Detienen a exfuncionario acusado de fraude financiero millonario</h3>
+                                    <p class="text-muted small mb-2">Publicado el <time datetime="2025-10-11">11 de octubre de 2025</time> | Justicia</p>
+                                    <p>El exfuncionario fue arrestado tras ser vinculado a un esquema de fraude que habría causado pérdidas millonarias al Estado.</p>
+                                </a>
+                            </article>
+                        </div>
+                        
+                        <!-- Noticia 3 -->
+                        <div class="col-lg-4 mb-4">
+                            <article class="news-card">
+                                <a href="../../news/justicia/noticia-del-tribunal.html" aria-label="Leer noticia: Tribunal Supremo confirma sentencia en caso de corrupción política" class="text-decoration-none text-dark">
+                                    <img src="../../assets/images/news/justicia/tribunal.jpg" alt="Tribunal Supremo confirma sentencia en caso de corrupción política" loading="lazy" class="img-fluid rounded mb-3">
+                                    <h3 class="h5">Tribunal Supremo confirma sentencia en caso de corrupción política</h3>
+                                    <p class="text-muted small mb-2">Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Justicia</p>
+                                    <p>La máxima instancia judicial ratifica la condena contra el político implicado en el caso de desviación de fondos públicos.</p>
+                                </a>
+                            </article>
+                        </div>
+                        
+                        <!-- Noticia 4 -->
+                        <div class="col-lg-4 mb-4">
+                            <article class="news-card">
+                                <a href="../../news/justicia/noticia-del-criminal.html" aria-label="Leer noticia: Condenan a cadena perpetua a líder de organización criminal internacional" class="text-decoration-none text-dark">
+                                    <img src="../../assets/images/news/justicia/condena.jpg" alt="Condenan a cadena perpetua a líder de organización criminal internacional" loading="lazy" class="img-fluid rounded mb-3">
+                                    <h3 class="h5">Condenan a cadena perpetua a líder de organización criminal internacional</h3>
+                                    <p class="text-muted small mb-2">Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Justicia</p>
+                                    <p>El tribunal impone la máxima pena por delitos de narcotráfico, lavado de dinero y organización criminal a nivel internacional.</p>
+                                </a>
+                            </article>
+                        </div>
+                        
+                        <!-- Noticia 5 -->
+                        <div class="col-lg-6 mb-4">
+                            <article class="news-card">
+                                <a href="../../news/justicia/noticia-sobre-empresa.html" aria-label="Leer noticia: Fiscalía inicia juicio contra empresa por evasión fiscal millonaria" class="text-decoration-none text-dark">
+                                    <img src="../../assets/images/news/justicia/juicio.jpg" alt="Fiscalía inicia juicio contra empresa por evasión fiscal millonaria" loading="lazy" class="img-fluid rounded mb-3">
+                                    <h3 class="h5">Fiscalía inicia juicio contra empresa por evasión fiscal millonaria</h3>
+                                    <p class="text-muted small mb-2">Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Justicia</p>
+                                    <p>La compañía enfrenta cargos por no declarar más de 50 millones en ingresos durante los últimos cinco ejercicios fiscales.</p>
+                                </a>
+                            </article>
+                        </div>
+                        
+                        <!-- Noticia 6 -->
+                        <div class="col-lg-6 mb-4">
+                            <article class="news-card">
+                                <a href="../../news/justicia/noticia-sobre-homicidio-multiple.html" aria-label="Leer noticia: Juez ordena prisión preventiva para acusado de homicidio múltiple" class="text-decoration-none text-dark">
+                                    <img src="../../assets/images/news/justicia/juez.jpg" alt="Juez ordena prisión preventiva para acusado de homicidio múltiple" loading="lazy" class="img-fluid rounded mb-3">
+                                    <h3 class="h5">Juez ordena prisión preventiva para acusado de homicidio múltiple</h3>
+                                    <p class="text-muted small mb-2">Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Justicia</p>
+                                    <p>El sospechoso permanecerá detenido mientras se prepara el juicio por los tres asesinatos ocurridos en la última semana.</p>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                          <!-- Noticia 4 -->
-                          <article class="news-card">
-                             <a href="../noticias/justicia/noticia-del-criminal.html" aria-label="Condenan a cadena perpetua a líder de organización criminal internacional">
-                              <img src="../imagenes/news/justicia/condena.jpg" alt="Condenan a cadena perpetua a líder de organización criminal internacional">
-                              <h3>Condenan a cadena perpetua a líder de organización criminal internacional</h3>
-                             </a>
-                           </article>
- 
-                         <!-- Noticia 5 -->
-                          <article class="news-card">
-                           <a href="../noticias/justicia/noticia-sobre-empresa.html" aria-label="Fiscalía inicia juicio contra empresa por evasión fiscal millonaria">
-                             <img src="../imagenes/news/justicia/juicio.jpg" alt="Fiscalía inicia juicio contra empresa por evasión fiscal millonaria">
-                             <h3>Fiscalía inicia juicio contra empresa por evasión fiscal millonaria</h3>
-                           </a>
-                          </article>
+                </div>
 
-                             
-                           <!-- Noticia 6 -->
-                          <article class="news-card">
-                             <a href="../noticias/justicia/noticia-sobre-homicidio-multiple.html" aria-label="Juez ordena prisión preventiva para acusado de homicidio múltiple">
-                               <img src="../imagenes/news/justicia/juez.jpg" alt="Juez ordena prisión preventiva para acusado de homicidio múltiple">
-                               <h3>Juez ordena prisión preventiva para acusado de homicidio múltiple</h3>
-                             </a>
-                           </article>
-                          
-                      </section>
-              </main>
+                <!-- Sidebar Column -->
+                <div class="col-lg-3">
+                    <aside class="aside-sidebar">
+                        
+                        <!-- Sección Noticias Recientes de Justicia -->
+                        <section class="opinion mt-1">
+                            <h3 class="section-title h5 mb-3">Noticias Recientes</h3>
 
+                            <article class="opinion-card mb-4">
+                                <a href="../../news/justicia/noticia-del-homicidio.html" aria-label="Leer noticia: Policía busca testigos de homicidio en centro comercial" class="text-decoration-none text-dark">
+                                    <img src="../../assets/images/news/justicia/homicidio.jpg" alt="Policía busca testigos de homicidio en centro comercial" loading="lazy" class="img-fluid rounded mb-2">
+                                    <h4 class="h6 fw-bold">Policía busca testigos de homicidio en centro comercial</h4>
+                                    <p class="small text-muted">
+                                        Las autoridades solicitan colaboración ciudadana para identificar al responsable del crimen ocurrido ayer por la tarde.
+                                    </p>
+                                </a>
+                            </article>
 
-            <!-- aside -->
-            <div class="aside-publicidad" aria-label="Publicidad" role="complementary">   <!-- el atributo role se usa para definir el papel o función semántica de un elemento para lectores de pantalla -->
-                <h3>PUBLICIDAD</h3>                                                       <!-- el valor complementary indica que este elemento es un complemento de contenido, es decir, no es contenido principal, sino información adicional.-->
-                   <aside>
-                    <!-- divs rotativos con las imagenes de publicidad de fondo -->
-                    <div class="imagen ad1" aria-hidden="true"></div>        <!-- aria-hidden="true" es un atributo de accesibilidad que le dice a los lectores de pantalla que ignoren el elemento -->
-                    <div class="imagen ad2" aria-hidden="true"></div>           
-                    <div class="imagen ad3" aria-hidden="true"></div>
-                   </aside>
+                            <article class="opinion-card mb-4">
+                                <a href="../../news/justicia/noticia-del-fraude.html" aria-label="Leer noticia: Exfuncionario niega cargos de fraude durante audiencia" class="text-decoration-none text-dark">
+                                    <img src="../../assets/images/news/justicia/arrested.jpg" alt="Exfuncionario niega cargos de fraude durante audiencia" loading="lazy" class="img-fluid rounded mb-2">
+                                    <h4 class="h6 fw-bold">Exfuncionario niega cargos de fraude durante audiencia</h4>
+                                    <p class="small text-muted">
+                                        El acusado se declaró inocente y su defensa solicitó la libertad bajo fianza mientras continúa la investigación.
+                                    </p>
+                                </a>
+                            </article>
+
+                            <article class="opinion-card mb-4">
+                                <a href="../../news/justicia/noticia-del-tribunal.html" aria-label="Leer noticia: Sentencia del Tribunal Supremo senta precedente legal importante" class="text-decoration-none text-dark">
+                                    <img src="../../assets/images/news/justicia/tribunal.jpg" alt="Sentencia del Tribunal Supremo senta precedente legal importante" loading="lazy" class="img-fluid rounded mb-2">
+                                    <h4 class="h6 fw-bold">Sentencia del Tribunal Supremo senta precedente legal importante</h4>
+                                    <p class="small text-muted">
+                                        Expertos legales destacan que esta decisión impactará futuros casos de corrupción a nivel nacional.
+                                    </p>
+                                </a>
+                            </article>
+
+                            <article class="opinion-card">
+                                <a href="../../news/justicia/noticia-sobre-empresa.html" aria-label="Leer noticia: Caso de evasión fiscal podría llevar a reforma tributaria" class="text-decoration-none text-dark">
+                                    <img src="../../assets/images/news/justicia/juicio.jpg" alt="Caso de evasión fiscal podría llevar a reforma tributaria" loading="lazy" class="img-fluid rounded mb-2">
+                                    <h4 class="h6 fw-bold">Caso de evasión fiscal podría llevar a reforma tributaria</h4>
+                                    <p class="small text-muted">
+                                        Legisladores anuncian que el escándalo impulsará nuevas leyes para combatir la evasión fiscal corporativa.
+                                    </p>
+                                </a>
+                            </article>
+                        </section>
+                    </aside>
+                </div>
             </div>
-  
-    </div>
+        </div>
+    </main>
 
-   
-       <!-- footer-->
-           <footer>
-             <div class="footer-content">
+
+     <!-- Footer Global -->
+     <footer class="footer-main"> 
+         <div class="container-fluid footer-content">
               <!-- Derechos reservados -->
-              <small>&copy; 2025 NewsHub. Todos los derechos reservados.</small>
+              <small>&copy; 2026 NewsHub. Todos los derechos reservados.</small>
 
               <!-- Íconos de redes sociales -->
               <div class="social-icons">
-                   <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
-                    <img src="../imagenes/iconos/redes/facebook.png" alt="ir a facebook">
+                   <a href="https://facebook.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
+                    <i class="bi bi-facebook"></i>
                    </a>
 
-                   <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
-                    <img src="../imagenes/iconos/redes/x.png" alt="ir a x">
+                   <a href="https://twitter.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
+                    <i class="bi bi-twitter-x"></i>
                    </a>
 
-                   <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
-                    <img src="../imagenes/iconos/redes/instagram.png" alt="ir a instagram">
+                   <a href="https://instagram.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
+                    <i class="bi bi-instagram"></i>
                    </a>
               </div>
 
                  <!-- Enlaces legales -->
                 <div class="footer-links">
-                  <a href="../legal/privacy.html" title="politica de privacidad">Política de Privacidad</a> |
-                  <a href="../legal/terms.html" title="terminos de uso">Términos de Uso</a>
-                </div>
-
-                <!-- Atribución de iconos -->
-                <div class="attribution">
-                   <small>
-                    <a href="https://www.flaticon.com/free-icons/instagram" title="Instagram icons" rel="nofollow noopener noreferrer">Instagram icons by Grow studio - Flaticon</a> |
-                    <a href="https://www.flaticon.com/free-icons/facebook" title="Facebook icons" rel="nofollow noopener noreferrer">Facebook icons by Freepik - Flaticon</a> |
-                    <a href="https://www.flaticon.com/free-icons/brands-and-logotypes" title="Brands icons" rel="nofollow noopener noreferrer">Brands icons by Freepik - Flaticon</a>
-                  </small>
+                  <a href="../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a> |
+                  <a href="../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
                 </div>
             </div>
-        </footer>
 
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
