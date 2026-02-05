@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--META ETIQUETAS-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resultados de búsqueda en NewsHub: encuentra rápidamente las noticias que buscas.">
+    <meta name="author" content="Oliver Antonio Díaz"/>
+    <meta name="robots" content="index, follow">  
+    <meta name="copyright" content="Oliver Antonio Díaz. Todos los derechos reservados.">
+    <meta name="theme-color" content="#2196f3">
+
+    <!-- Etiquetas Open Graph -->
+    <meta property="og:title" content="Resultados de Búsqueda | NewsHub">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost/newsHub/pages/search/index.html">
+    <meta property="og:image" content="../../assets/images/logo/logo.jpg">
+    <meta property="og:description" content="Encuentra rápidamente las noticias que buscas en NewsHub.">
+    <meta property="og:site_name" content="NewsHub">
+    <meta property="og:locale" content="es_ES"> 
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Resultados de Búsqueda | NewsHub">
+    <meta name="twitter:description" content="Encuentra rápidamente las noticias que buscas en NewsHub.">
+    <meta name="twitter:image" content="../../assets/images/logo/logo.jpg">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
+
+    <!-- Título y CSS -->
+    <title>Resultados de Búsqueda | NewsHub</title>
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/components/header.css">
+    <link rel="stylesheet" href="../../assets/css/components/footer.css">
+    <link rel="stylesheet" href="../../assets/css/dark.css">
+
+    <!-- Favicons -->
+    <link rel="icon" href="../../assets/images/iconos/favicon/favicon16x16.jpg" type="image/jpg" sizes="16x16">
+    <link rel="icon" href="../../assets/images/iconos/favicon/favicon32x32.jpg" type="image/jpg" sizes="32x32">
+    <link rel="icon" href="../../assets/images/iconos/favicon/favicon48x48.jpg" type="image/jpg" sizes="48x48">
+
+    <!-- Scripts -->
+    <script src="../../assets/js/noticias.js" defer></script> 
+    <script src="../../assets/js/search.js" defer></script> 
+    <script src="../../assets/js/dark.js" defer></script>
+    <script src="../../assets/js/resultados_busqueda.js" defer></script>
+
+</head>
+
+<body>
+
+    
+          <!-- Header Global -->
+          <header class="header-main sticky-top">
+              <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <div class="navbar-brand">
+                <a href="../index.html" aria-label="Ir a la página principal de NewsHub" class="text-decoration-none text-dark d-flex align-items-center gap-2">
+                  <img src="../../assets/images/logo/logo.jpg" alt="Logo NewsHub" class="logo" loading="lazy">
+                  <h1 class="d-inline-block mb-0">NewsHub</h1>
+                </a>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../category/politica.html">Política</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../category/internacional.html">Internacional</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../category/economia.html">Economía</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../category/salud.html">Salud</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../category/deporte.html">Deporte</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../category/clima.html">Clima</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../category/justicia.html">Justicia</a>
+                  </li>
+                </ul>
+             
+                <form class="d-flex" role="search">
+                  <input class="form-control me-1" type="search" placeholder="Buscar noticias..." aria-label="Search"/>
+                  <button class="btn btn-outline-primary" type="submit">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </form>
+                
+                <button class="btn btn-outline-primary ms-1" type="button" id="darkModeToggle" aria-label="Cambiar modo oscuro">
+                  <i class="bi bi-brightness-high-fill"></i>
+                </button>
+
+              </div>
+            </div>
+          </nav>
+          </header>
+
+   
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="main-content">
+      <!-- El contenido se cargará dinámicamente mediante resultados_busqueda.js -->
+      <div class="container py-5 text-center">
+          <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Cargando resultados...</span>
+          </div>
+          <p class="mt-3">Buscando noticias...</p>
+      </div>
+  </main>
+
+
+    <!-- Footer Global -->
+    <footer class="footer-main"> 
+         <div class="container-fluid footer-content">
+              <small>&copy; 2026 NewsHub. Todos los derechos reservados.</small>
+
+              <div class="social-icons">
+                   <a href="https://facebook.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
+                    <i class="bi bi-facebook"></i>
+                   </a>
+                   <a href="https://twitter.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X">
+                    <i class="bi bi-twitter-x"></i>
+                   </a>
+                   <a href="https://instagram.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
+                    <i class="bi bi-instagram"></i>
+                   </a>
+              </div>
+
+                <div class="footer-links">
+                  <a href="../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a> |
+                  <a href="../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
+                </div>
+            </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

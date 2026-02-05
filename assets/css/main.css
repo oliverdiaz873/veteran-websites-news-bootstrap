@@ -23,12 +23,14 @@ body {
 /* Main */
 .main-content {
     min-height: calc(100vh - 200px);
-    padding: 0 1rem; /* width */
+    padding: 0 1rem;
+    /* width */
 }
 
 @media (max-width: 768px) {
     .main-content {
-        padding: 0 0.1rem; /* width en movil */
+        padding: 0 0.1rem;
+        /* width en movil */
     }
 }
 
@@ -61,10 +63,15 @@ body {
 }
 
 @keyframes blink {
-    0%, 50%, 100% {
+
+    0%,
+    50%,
+    100% {
         opacity: 1;
     }
-    25%, 75% {
+
+    25%,
+    75% {
         opacity: 0;
     }
 }
@@ -114,19 +121,19 @@ body {
         flex-direction: column !important;
         gap: 1rem;
     }
-    
+
     .featured-article .content,
     .featured-article .image-wrapper {
         flex: 1 !important;
         max-width: 100% !important;
         width: 100% !important;
     }
-    
+
     .featured-article .image-wrapper {
         order: -1;
         margin-bottom: 1rem;
     }
-    
+
     .featured-article .content {
         order: 1;
     }
@@ -193,13 +200,15 @@ body {
 .news-card:hover h4,
 .news-card:hover h5,
 .news-card:hover h6 {
-    color: #dc3545; /* Hover de títulos de tarjetas - rojo */
+    color: #dc3545;
+    /* Hover de títulos de tarjetas - rojo */
 }
 
 /* hover de titulos de seccion opinion */
 .opinion-card:hover h4,
 .opinion-card:hover h6 {
-    color: #dc3545; /* Hover de títulos de opinion - rojo */
+    color: #dc3545;
+    /* Hover de títulos de opinion - rojo */
 }
 
 /* titulos */
@@ -291,10 +300,7 @@ button:focus {
     }
 }
 
-/* Sidebar */
-.aside-sidebar {
-    /* Eliminado position: sticky para que desplace junto con el contenido */
-}
+/* Sidebar removal of empty ruleset */
 
 /* Publicidad */
 .aside-publicidad {
@@ -361,13 +367,15 @@ button:focus {
     padding: 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    border-left: 1.5px solid #ddd; /* Borde izquierdo como separación */
+    border-left: 1.5px solid #ddd;
+    /* Borde izquierdo como separación */
 }
 
 /* Margen para tablets (iPad Air, Surface Pro 7) de separación entre seccion opinion y footer */
 @media (min-width: 769px) and (max-width: 1024px) {
     .opinion {
-        margin-bottom: 2rem; /* Separación del footer en tablets */
+        margin-bottom: 2rem;
+        /* Separación del footer en tablets */
     }
 }
 

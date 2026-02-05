@@ -1,0 +1,51 @@
+/* ================================
+   ESTILOS PARA LA NOTICIA INDIVIDUAL (Cuerpo)
+================================== */
+/* Contenedor unificado para que la cabecera y el cuerpo tengan el mismo fondo */
+.article-wrapper {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 2rem;
+}
+
+/* Cuerpo de la noticia: texto completo y lead uniforme */
+.article-body,
+.featured-article .lead {
+  font-size: 1.1rem !important;
+  /* Uniformidad total */
+  line-height: 1.8;
+  color: #333;
+}
+
+.article-body {
+  margin-top: -15px;
+  /* Reduce el espacio con la cabecera */
+}
+
+.article-body p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* Sobrescribir hover para que no tenga borde/sombra ni cambio de color en la página de noticia */
+.featured-article:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+body.dark-mode .featured-article:hover {
+  background-color: var(--dark-card-bg) !important;
+  /* Mantiene el color de la tarjeta en modo oscuro */
+}
+
+/* figure caption (en caso de que se use en el cuerpo) */
+.article-body figure {
+  margin-bottom: 1.5rem;
+}
+
+.article-body figure img {
+  border-radius: 10px;
+  width: 100%;
+}

@@ -37,12 +37,13 @@ body.dark-mode .nav-link {
 
 /* Hover del navbar - mismo color que modo claro */
 body.dark-mode .nav-link:hover {
-    color: #dc3545; 
+    color: #dc3545;
 }
 
 /* Active del navbar */
 body.dark-mode .nav-link.active {
-    color: #000000 !important; /* Texto negro para botón activo en modo oscuro */
+    color: #000000 !important;
+    /* Texto negro para botón activo en modo oscuro */
 }
 
 body.dark-mode .form-control {
@@ -53,12 +54,14 @@ body.dark-mode .form-control {
 
 /* Placeholder del buscador */
 body.dark-mode .form-control::placeholder {
-    color: var(--dark-text-muted); /* Placeholder visible en modo oscuro */
+    color: var(--dark-text-muted);
+    /* Placeholder visible en modo oscuro */
 }
 
 /* Iconos de botones del buscador y modo oscuro*/
 body.dark-mode .btn-outline-primary i {
-    color: #ffffff !important; /* Iconos blancos en modo oscuro */
+    color: #ffffff !important;
+    /* Iconos blancos en modo oscuro */
 }
 
 /* Icono del menú hamburguesa en modo oscuro */
@@ -90,18 +93,22 @@ body.dark-mode .news-card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+body.dark-mode .article-wrapper,
 body.dark-mode .featured-article {
     background-color: var(--dark-card-bg);
     border: none;
 }
 
+body.dark-mode .article-wrapper:hover,
 body.dark-mode .featured-article:hover {
-    background-color: var(--dark-surface-color);
+    background-color: var(--dark-card-bg);
+    /* Mantenemos el color para evitar efecto tarjeta partida */
 }
 
 body.dark-mode .featured-news {
     background-color: var(--dark-card-bg);
-    border: none; /* Sin bordes como en modo claro */
+    border: none;
+    /* Sin bordes como en modo claro */
 }
 
 /* Secciones en modo oscuro */
@@ -118,7 +125,8 @@ body.dark-mode .aside-sidebar {
 
 body.dark-mode .opinion {
     background-color: var(--dark-surface-color);
-    border-left: 1.5px solid var(--dark-border-color); /* Borde izquierdo como separación */
+    border-left: 1.5px solid var(--dark-border-color);
+    /* Borde izquierdo como separación */
     /* Sin padding, border-radius, box-shadow - hereda del modo claro */
 }
 
@@ -142,11 +150,12 @@ body.dark-mode .opinion-card h6 {
 
 body.dark-mode .opinion-card:hover h4,
 body.dark-mode .opinion-card:hover h6 {
-    color: #dc3545; /* Hover de títulos de opinion - rojo en modo oscuro */
+    color: #dc3545;
+    /* Hover de títulos de opinion - rojo en modo oscuro */
 }
 
 body.dark-mode .opinion-card p {
-    color: var(--dark-text-muted);
+    color: var(--dark-text-color) !important;
 }
 
 /* Footer en modo oscuro */
@@ -158,11 +167,13 @@ body.dark-mode .footer-main {
 /* Margen adicional para móviles en modo oscuro */
 @media (max-width: 768px) {
     body.dark-mode .opinion {
-        margin-bottom: 2rem; /* Separación del footer en móviles */
+        margin-bottom: 2rem;
+        /* Separación del footer en móviles */
     }
-    
+
     body.dark-mode .footer-main {
-        margin-top: 2rem; /* Separación superior del footer en móviles */
+        margin-top: 2rem;
+        /* Separación superior del footer en móviles */
     }
 }
 
@@ -191,18 +202,19 @@ body.dark-mode .social-icons a:hover {
 /* Textos en modo oscuro */
 body.dark-mode .section-title {
     color: var(--dark-text-color);
-    border-bottom: 1.5px solid var(--dark-border-color); /* Borde oscuro como en modo claro */
+    border-bottom: 1.5px solid var(--dark-border-color);
+    /* Borde oscuro como en modo claro */
 }
 
 body.dark-mode .text-muted {
     color: var(--dark-text-muted) !important;
 }
 
-body.dark-mode h1, 
-body.dark-mode h2, 
-body.dark-mode h3, 
-body.dark-mode h4, 
-body.dark-mode h5, 
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
 body.dark-mode h6 {
     color: var(--dark-text-color);
 }
@@ -214,19 +226,24 @@ body.dark-mode .news-card h5 {
 
 body.dark-mode .news-card h3:hover,
 body.dark-mode .news-card h5:hover {
-    color: #dc3545; /* Hover de títulos de news cards - rojo en modo oscuro */
+    color: #dc3545;
+    /* Hover de títulos de news cards - rojo en modo oscuro */
 }
 
 /* Párrafos de noticias en modo oscuro */
 body.dark-mode .news-card p,
 body.dark-mode .featured-article p,
-body.dark-mode .featured-news p {
-    color: var(--dark-text-color);
+body.dark-mode .featured-news p,
+body.dark-mode .text-dark {
+    color: var(--dark-text-color) !important;
 }
 
 body.dark-mode .news-card .fs-6,
-body.dark-mode .featured-article .fs-6 {
-    color: var(--dark-text-color);
+body.dark-mode .featured-article .fs-6,
+body.dark-mode .article-body,
+body.dark-mode .article-body p,
+body.dark-mode .featured-article .lead {
+    color: var(--dark-text-color) !important;
 }
 
 /* Botones en modo oscuro */
