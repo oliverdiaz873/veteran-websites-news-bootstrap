@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="col-md-6 col-lg-4 mb-4">
                 <article class="news-card h-100 shadow-sm">
                     <a href="${noticia.url}" class="text-decoration-none text-dark d-flex flex-column h-100">
-                        <img src="${noticia.imagen}" alt="${noticia.titulo}" class="img-fluid rounded-top" style="height: 200px; object-fit: cover;">
+                        <img src="${noticia.imagen}" alt="${noticia.titulo}" class="img-fluid rounded-top">
                         <div class="p-3 d-flex flex-column flex-grow-1">
-                            <span class="badge bg-primary align-self-start mb-2">${noticia.categoria}</span>
+                            <span class="badge bg-danger align-self-start mb-2">${noticia.categoria}</span> <!-- Badge de categoría de la noticia -->
                             <h3 class="h5 fw-bold mb-2">${noticia.titulo}</h3>
                             <p class="small text-muted mb-2">${noticia.fecha}</p>
                             <p class="small flex-grow-1">${noticia.resumen}</p>
-                            <span class="text-primary fw-bold mt-2">Leer más <i class="bi bi-arrow-right"></i></span>
+                            <span class="text-danger fw-bold mt-2">Leer más <i class="bi bi-arrow-right"></i></span> <!-- Botón "Leer más" de la tarjeta -->
                         </div>
                     </a>
                 </article>
@@ -34,19 +34,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (query && query.trim() !== '') {
         const queryLower = query.toLowerCase();
+        const normalizedQuery = query.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
         // Filtrar noticias (asumiendo que noticias.js ya cargó el array 'noticias')
-        const resultados = noticias.filter(n =>
-            n.titulo.toLowerCase().includes(queryLower) ||
-            n.categoria.toLowerCase().includes(queryLower) ||
-            n.resumen.toLowerCase().includes(queryLower)
-        );
+        const resultados = noticias.filter(n => {
+            const normalizedTitulo = n.titulo.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            const normalizedCategoria = n.categoria.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            const normalizedResumen = n.resumen.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            
+            return normalizedTitulo.includes(normalizedQuery) ||
+                   normalizedCategoria.includes(normalizedQuery) ||
+                   normalizedResumen.includes(normalizedQuery);
+        });
 
         let html = `
             <div class="container py-5">
                 <div class="row mb-4">
                     <div class="col-12">
-                        <h2 class="h3 border-bottom pb-3">Resultados de búsqueda para: <span class="text-primary">"${query}"</span></h2>
+                        <h2 class="h3 border-bottom pb-3">Resultados de búsqueda para: <span class="text-danger">"${query}"</span></h2> <!-- Término de búsqueda resaltado -->
                         <p class="text-muted">Se encontraron ${resultados.length} noticias relacionadas.</p>
                     </div>
                 </div>
@@ -59,11 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         } else {
             html += `
-                <div class="col-12 text-center py-5">
-                    <i class="bi bi-search text-muted" style="font-size: 4rem;"></i>
-                    <h3 class="mt-4">No se encontraron resultados</h3>
-                    <p class="text-muted">Intenta con otros términos como "economía", "deporte" o "inflación".</p>
-                    <a href="../index.html" class="btn btn-primary mt-3">Volver al inicio</a>
+                <div class="no-results">
+                    <i class="bi bi-search search-icon"></i>
+                    <h3>No se encontraron resultados</h3>
+                    <p>Intenta con otros términos como "economía", "deporte" o "inflación".</p>
+                    <a href="../index.html" class="btn-back">Volver al inicio</a> <!-- Botón para volver al inicio cuando no hay resultados -->
                 </div>
             `;
         }
@@ -79,7 +84,8 @@ document.addEventListener('DOMContentLoaded', function () {
         resultsContainer.innerHTML = `
             <div class="container py-5 text-center">
                 <h2>¿Qué estás buscando?</h2>
-                <p>Ingresa un término en el buscador de arriba para encontrar noticias.</p>
+                <p>Usa el buscador para encontrar las últimas noticias</p>
+                <a href="../index.html" class="btn btn-primary">Volver al inicio</a>
             </div>
         `;
     }

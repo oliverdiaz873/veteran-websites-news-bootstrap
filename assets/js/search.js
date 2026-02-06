@@ -26,7 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 searchPath = 'pages/search/index.html';
             }
 
-            window.location.href = `${searchPath}?query=${encodeURIComponent(query)}`;
+            // Remover acentos para búsqueda más flexible
+            const normalizedQuery = query.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            
+            window.location.href = `${searchPath}?query=${encodeURIComponent(normalizedQuery)}`;
         }
     };
 
@@ -39,8 +42,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 searchInput.classList.add('show');
                 searchInput.focus();
                 isInputVisible = true;
+                // Cambiar icono a X grande
+                searchButton.innerHTML = '<i class="bi bi-x-lg"></i>';
             } else {
-                performSearch();
+                // Ocultar input
+                searchInput.classList.remove('show');
+                isInputVisible = false;
+                // Cambiar icono a lupa
+                searchButton.innerHTML = '<i class="bi bi-search"></i>';
             }
         });
 

@@ -3,7 +3,6 @@
 /* H1 Custom Styles - Aplicar fuente Domine solo a h1 */
 h1 {
     font-family: 'Domine', Georgia, serif;
-    font-weight: bold;
 }
 
 /* Navbar Styles */
@@ -121,6 +120,20 @@ h1 {
 
 /* Icono buscador */
 .bi-search {
+    font-size: 1.3rem;
+    line-height: 1;
+    margin: 0;
+}
+
+/* Icono X para cerrar buscador */
+.bi-x {
+    font-size: 1.3rem;
+    line-height: 1;
+    margin: 0;
+}
+
+/* Icono X grande para cerrar buscador */
+.bi-x-lg {
     font-size: 1.3rem;
     line-height: 1;
     margin: 0;

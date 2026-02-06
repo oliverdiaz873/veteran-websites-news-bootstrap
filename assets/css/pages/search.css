@@ -1,0 +1,44 @@
+/* Search Page Styles - NewsHub */
+
+/* Estilos para "no resultados" - replicando estilos inline originales */
+.no-results {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.no-results .search-icon {
+    font-size: 4rem;
+    color: var(--text-muted);
+}
+
+.no-results h3 {
+    margin-top: 1rem;
+}
+
+.no-results p {
+    color: var(--text-muted);
+}
+
+.no-results .btn-back {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+    transition: var(--transition);
+} /* Botón "Volver al inicio" cuando no hay resultados */
+
+.no-results .btn-back:hover {
+    background-color: #c82333;
+    color: white;
+    transform: translateY(-1px);
+} /* Hover del botón "Volver al inicio" */
+
+/* Estilos para imágenes en tarjetas de noticias */
+.news-card img {
+    height: 200px;
+    object-fit: cover;
+}
