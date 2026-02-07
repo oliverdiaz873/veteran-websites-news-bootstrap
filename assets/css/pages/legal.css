@@ -1,0 +1,313 @@
+
+
+/* ===============================
+   ESTILOS ESPECÍFICOS PARA PÁGINAS LEGALES
+=============================== */
+
+span{
+    font-size: 24px;
+}
+
+/* No sobreescribir .container - usar estilos de main.css */
+
+/* Estilo específico para el span del navbar-brand en páginas legales */
+.header-main .navbar-brand span {
+    font-family: 'Domine', Georgia, serif !important;
+    font-weight: 400 !important;
+}
+
+/* TÍTULO DEL MAIN - Usa mismos estilos que main.css */
+.section-title {
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 1.6rem;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+
+/* ===============================
+   CONTENIDO LEGAL - DISEÑO MODERNO Y RESPONSIVO
+=============================== */
+.privacy-content {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    line-height: 1.8;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    position: relative;
+    overflow: hidden; /* Evitar overflow */
+    word-wrap: break-word; /* Romper palabras largas */
+}
+
+.privacy-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ddd;
+    border-radius: 16px 16px 0 0;
+}
+
+.privacy-content:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Primer párrafo - Introducción destacada */
+#primer_parrafo {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #212529;
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    padding: 20px;
+    border-left: 4px solid #dc3545;
+    overflow-wrap: break-word; /* Romper palabras largas */
+}
+
+/* Párrafos generales */
+.privacy-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #37474f;
+    text-align: left;
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
+    overflow-wrap: break-word; /* Romper palabras largas */
+}
+
+/* Subtítulos h3 - Diseño moderno */
+.privacy-content h3 {
+    font-size: 1.3rem;
+    color: #212529;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: left;
+    position: relative;
+    padding-left: 20px;
+    overflow-wrap: break-word; /* Romper palabras largas */
+}
+
+.privacy-content h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #dc3545;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2);
+}
+
+/* Enlaces - Diseño elegante */
+.privacy-content a {
+    color: #dc3545;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+    padding-bottom: 2px;
+    word-break: break-all; /* Romper enlaces largos */
+}
+
+.privacy-content a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #dc3545, #ff6b6b);
+    transition: width 0.3s ease;
+}
+
+.privacy-content a:hover {
+    color: #c82333;
+}
+
+.privacy-content a:hover::after {
+    width: 100%;
+}
+
+/* ===============================
+   MEDIA QUERIES - RESPONSIVIDAD
+=============================== */
+
+/* Tablets y móviles grandes */
+@media (max-width: 768px) {
+    .privacy-content {
+        padding: 25px;
+        margin: 0 15px 30px 15px;
+        border-radius: 12px;
+    }
+    
+    #primer_parrafo {
+        padding: 15px;
+        font-size: 1rem;
+    }
+    
+    .privacy-content h3 {
+        font-size: 1.2rem;
+        padding-left: 15px;
+    }
+    
+    .privacy-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}
+
+/* Móviles */
+@media (max-width: 576px) {
+    .privacy-content {
+        padding: 20px;
+        margin: 0 10px 25px 10px;
+        border-radius: 8px;
+    }
+    
+    #primer_parrafo {
+        padding: 12px;
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .privacy-content h3 {
+        font-size: 1.1rem;
+        padding-left: 12px;
+        margin-top: 2rem;
+    }
+    
+    .privacy-content h3::before {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .privacy-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 1.2rem;
+    }
+    
+    .privacy-content a {
+        font-size: 0.9rem;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 375px) {
+    .privacy-content {
+        padding: 15px;
+        margin: 0 5px 20px 5px;
+    }
+    
+    #primer_parrafo {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .privacy-content h3 {
+        font-size: 1rem;
+        padding-left: 10px;
+    }
+    
+    .privacy-content p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
+
+/* ===============================
+   MODO OSCURO - ESTILOS ESPECÍFICOS
+=============================== */
+@media (prefers-color-scheme: dark) {
+    .privacy-content {
+        background: #242424;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #e0e0e0;
+    }
+    
+    #primer_parrafo {
+        color: #ffffff;
+        background: #2d2d2d;
+        border-left-color: #ef4444;
+    }
+    
+    .privacy-content p {
+        color: #ffffff;
+    }
+    
+    .privacy-content h3 {
+        color: #ffffff !important;
+    }
+    
+    .privacy-content h3::before {
+        background: #ef4444;
+        box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+    }
+    
+    .privacy-content a {
+        color: #ef4444;
+    }
+    
+    .privacy-content a:hover {
+        color: #dc2626;
+    }
+    
+    .privacy-content a::after {
+        background: linear-gradient(90deg, #ef4444, #f87171);
+    }
+}
+
+/* Clase específica para modo oscuro (si se usa toggle) */
+body.dark-mode .privacy-content {
+    background: #242424;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+}
+
+body.dark-mode #primer_parrafo {
+    color: #ffffff;
+    background: #2d2d2d;
+    border-left-color: #ef4444;
+}
+
+body.dark-mode .privacy-content p {
+    color: #ffffff;
+}
+
+body.dark-mode .privacy-content h3 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .privacy-content h3::before {
+    background: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+body.dark-mode .privacy-content a {
+    color: #ef4444;
+}
+
+body.dark-mode .privacy-content a:hover {
+    color: #dc2626;
+}
+
+body.dark-mode .privacy-content a::after {
+    background: linear-gradient(90deg, #ef4444, #f87171);
+}

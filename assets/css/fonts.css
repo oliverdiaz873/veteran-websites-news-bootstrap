@@ -53,4 +53,14 @@ h1{
     font-family: var(--font-family-primary);
 }
 
+/* Aplicar fuente al span del header*/
+span{
+    font-family: var(--font-family-primary);
+}
+
+/* Estilo específico para el span del navbar-brand */
+.navbar-brand span {
+    font-family: var(--font-family-primary) !important;
+    font-weight: var(--font-weight-light) !important;
+}
 

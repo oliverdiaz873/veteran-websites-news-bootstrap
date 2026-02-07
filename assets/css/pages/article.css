@@ -1,6 +1,17 @@
 /* ================================
    ESTILOS PARA LA NOTICIA INDIVIDUAL (Cuerpo)
 ================================== */
+
+span {
+  font-size: 1.5rem;
+}
+
+/* Estilo para h1 en páginas de noticias */
+h1 {
+  font-family: sans-serif, Helvetica;
+  font-weight: 700;
+}
+
 /* Contenedor unificado para que la cabecera y el cuerpo tengan el mismo fondo */
 .article-wrapper {
   background-color: white;
