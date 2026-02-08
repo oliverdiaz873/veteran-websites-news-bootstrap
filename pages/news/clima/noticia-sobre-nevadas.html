@@ -6,146 +6,253 @@
     <!--META ETIQUETAS-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nevadas intensas afectan el norte de Europa y generan cierres de carreteras."/>
+    <meta name="description" content="Nevadas históricas paralizan el norte del país"/>
     <meta name="author" content="Oliver Antonio Díaz"/>
     <meta name="robots" content="index, follow">  
     <meta name="copyright" content="Oliver Antonio Díaz. Todos los derechos reservados.">
     <meta name="theme-color" content="#2196f3">
 
     <!-- etiquetas Open Graph -->
-    <meta property="og:title" content="Nevadas intensas afectan el norte de Europa y generan cierres de carreteras.">
+    <meta property="og:title" content="Nevadas históricas paralizan el norte del país">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost/newsHub/noticias/clima/noticia-sobre-nevadas.html">  
+    <meta property="og:url" content="http://localhost/newsHub/pages/news/clima/noticia-sobre-nevadas.html">  
     <meta property="og:image" content="../../../assets/images/news/clima/winter.jpg"> 
-    <meta property="og:description" content="Nevadas intensas afectan el norte de Europa y generan cierres de carreteras.">
+    <meta property="og:description" content="Nevadas históricas paralizan el norte del país.">
     <meta property="og:site_name" content="NewsHub">
     <meta property="og:locale" content="es_ES"> 
 
+    <!--  Twitter Cards para X-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nevadas históricas paralizan el norte del país">
+    <meta name="twitter:description" content="Nevadas históricas paralizan el norte del país.">
+    <meta name="twitter:image" content="../../../assets/images/news/clima/winter.jpg">
+
     <!-- Título y CSS -->
-    <title>Nevadas intensas afectan el norte de Europa y generan cierres de carreteras - NewsHub</title>
-    <link rel="stylesheet" href="../../../assets/css/news.css">
+    <title>Nevadas históricas paralizan el norte del país | NewsHub</title>
+    <link rel="stylesheet" href="../../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link rel="stylesheet" href="../../../assets/css/components/header.css">
+    <link rel="stylesheet" href="../../../assets/css/components/footer.css">
+    <link rel="stylesheet" href="../../../assets/css/dark.css">
+    <link rel="stylesheet" href="../../../assets/css/pages/article.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
     <!-- Favicons -->
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-16x16.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="../../../assets/images/iconos/favicon/favicon16x16.jpg" type="image/jpg" sizes="16x16">
+    <link rel="icon" href="../../../assets/images/iconos/favicon/favicon32x32.jpg" type="image/jpg" sizes="32x32">
+    <link rel="icon" href="../../../assets/images/iconos/favicon/favicon48x48.jpg" type="image/jpg" sizes="48x48">
+
+    <!-- scripts -->
+    <script src="../../../assets/js/search.js" defer></script>
+    <script src="../../../assets/js/dark.js" defer></script>
 
   </head>
 
-
    <body>
-           <!--header-->
-          <header>
+           <!-- Header Global -->
+          <header class="header-main sticky-top">
+              <!--Bootstrap Navbar : Supported content -->
+              <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <div class="navbar-brand">
+                <a href="../../index.html" aria-label="Ir a la página principal de NewsHub" class="text-decoration-none text-dark d-flex align-items-center gap-2">
+                  <img src="../../../assets/images/logo/logo.jpg" alt="Logo NewsHub" class="logo" loading="lazy">
+                  <span class="d-inline-block mb-0">NewsHub</span>
+                </a>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <!-- icono del menu hamburguesa -->
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/politica.html">Política</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/internacional.html">Internacional</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/economia.html">Economía</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/salud.html">Salud</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/deporte.html">Deporte</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/clima.html">Clima</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/justicia.html">Justicia</a>
+                  </li>
+                </ul>
+             
+                <!-- input buscador -->
+                <form class="d-flex" role="search">
+                  <input class="form-control me-1" type="search" placeholder="Buscar noticias..." aria-label="Search"/>
+                  <button class="btn btn-outline-primary" type="submit">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </form>
+                
+                <!-- Botón modo oscuro -->
+                <button class="btn btn-outline-primary ms-1" type="button" id="darkModeToggle" aria-label="Cambiar modo oscuro">
+                  <i class="bi bi-brightness-high-fill"></i>
+                </button>
 
-                <h1 class="logo">  
-                    <a href="../../index.html" aria-label="Ir a la página principal de NewsHub">  <!-- logo clickeable-->  <!--aria-label proporciona una descripción textual de un elemento para los lectores de pantalla -->
-                        <img src="../../../assets/images/logo/logo.jpg" alt="Logo NewsHub">
-                           NewsHub
-                    </a> 
-                </h1>
-               
-              <nav> <!--barra de navegacion-->
-                  <ul> <!--la clase active indica la pagina activa-->
-                    <li><a href="../../index.html" class="icon_animation" aria-label="Inicio"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación"> Inicio</a></li>
-                    <li><a href="../../category/politica.html" class="icon_animation" aria-label="Sección Política"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación"> Política</a></li>
-                    <li><a href="../../category/internacional.html" class="icon_animation" aria-label="Sección Internacional"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación"> Internacional</a></li>
-                    <li><a href="../../category/economia.html" class="icon_animation" aria-label="Sección Economía"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación"  > Economía</a></li>
-                    <li><a href="../../category/salud.html" class="icon_animation" aria-label="Sección Salud"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación" > Salud</a></li>
-                    <li><a href="../../category/deporte.html" class="icon_animation" aria-label="Sección Deporte"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación" > Deporte</a></li>
-                    <li><a href="../../category/clima.html" class="icon_animation" aria-label="Sección Clima"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación" > Clima</a></li>
-                    <li><a href="../../category/justicia.html" class="icon_animation" aria-label="Sección Justicia"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación" > Justicia</a></li>
-                 </ul>
-              </nav>
-              
+              </div>
+            </div>
+          </nav>
           </header>
 
-
-          
-          <!--main-->
-          <div class="container">
-          
-            <main class="noticia-individual">
-                <article>
-                   <h2 class="section-title">Nevadas intensas afectan el norte de Europa y generan cierres de carreteras</h2>
-                     
-                        <p id="fecha-noticia">
-                          <small>
-                             Publicado el <time datetime="2025-10-11">11 de octubre de 2025</time> | Categoría: Clima
-                          </small>
-                        </p>
-                        
-                       <figure>
-                        <img src="../../../assets/images/news/clima/winter.jpg" alt="Nevadas intensas afectan el norte de Europa y generan cierres de carreteras">
-                        <figcaption>Una intensa nevada cubre calles y vehículos, dificultando el tránsito en varias ciudades del norte de Europa.</figcaption>
-                       </figure>
-                  
-                       <p>Nevadas intensas están afectando el norte de Europa, causando interrupciones significativas en el transporte y generando riesgos para la población en varias regiones.</p>
-                       <p>Las fuertes precipitaciones de nieve han acumulado grandes cantidades en carreteras, calles y autopistas, lo que ha obligado a las autoridades a implementar cierres temporales para garantizar la seguridad de los conductores.</p>
-                       <p>Se han reportado retrasos y cancelaciones de vuelos en aeropuertos internacionales y regionales, así como interrupciones en servicios de trenes y transporte público debido a vías bloqueadas por la nieve y el hielo.</p>
-                       <p>Las condiciones extremas han provocado accidentes de tráfico y dificultades para los vehículos de emergencia, lo que ha llevado a que los servicios de rescate y mantenimiento trabajen sin descanso para despejar las rutas principales.</p>
-                       <p>Se recomienda a los ciudadanos evitar desplazamientos innecesarios y utilizar transporte público solo cuando sea seguro, además de seguir las indicaciones de las autoridades locales y los informes meteorológicos actualizados.</p>
-                       <p>Los gobiernos regionales han activado planes de contingencia, que incluyen refugios temporales, asistencia a personas vulnerables y distribución de equipos de protección y suministros esenciales en zonas afectadas.</p>
-                       <p>Los meteorólogos advierten que las nevadas podrían continuar durante varios días, y que se esperan bajas temperaturas y posibles tormentas de nieve que podrían agravar la situación, especialmente en zonas rurales y montañosas.</p>
-                       <p>Las autoridades han solicitado colaboración de la población para reportar cualquier incidente, mantenerse informado a través de canales oficiales y tomar precauciones adicionales para protegerse del frío extremo.</p>
-                       <p>Además, se ha recomendado a los conductores equipar sus vehículos con neumáticos de invierno, cadenas y kits de emergencia, y mantenerse alerta ante cambios bruscos en el clima que puedan afectar la seguridad en carretera.</p>
-                       <p>En general, las nevadas están generando un impacto considerable en la vida cotidiana, obligando a muchas personas a trabajar desde casa y a planificar sus desplazamientos con anticipación para evitar riesgos innecesarios.</p>
-
-             </article>
-         </main>
-
-                  
-              
-            <!-- aside -->
-            <div class="aside-publicidad" aria-label="Publicidad" role="complementary">   <!-- el atributo role se usa para definir el papel o función semántica de un elemento para lectores de pantalla -->
-                <h3>PUBLICIDAD</h3>                                                       <!-- el valor complementary indica que este elemento es un complemento de contenido, es decir, no es contenido principal, sino información adicional.-->
-                   <aside>
-                    <!-- divs rotativos con las imagenes de publicidad de fondo -->
-                    <div class="imagen ad1" aria-hidden="true"></div>        <!-- aria-hidden="true" es un atributo de accesibilidad que le dice a los lectores de pantalla que ignoren el elemento -->
-                    <div class="imagen ad2" aria-hidden="true"></div>           
-                    <div class="imagen ad3" aria-hidden="true"></div>
-                   </aside>
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb" class="breadcrumb-container">
+            <div class="container-fluid">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="../../index.html">Inicio</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="../../category/clima.html">Clima</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Nevadas históricas paralizan el norte del país</li>
+              </ol>
             </div>
-  
-    </div>
+          </nav>
 
-   
-       <!-- footer-->
-           <footer>
-             <div class="footer-content">
+          <!--main-->
+          <main class="main-content">
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <!-- Main Content Column -->
+                    <div class="col-lg-9">
+                        <div class="article-wrapper shadow-sm mb-5">
+                            <article class="featured-article mb-4">
+                                <div class="d-flex align-items-start gap-4">
+                                    <div class="content">
+                                        <h1 class="h1 mb-3">Nevadas históricas paralizan el norte del país</h1>
+                                        <p class="text-muted mb-2">
+                                            <small>Publicado el <time datetime="2025-10-11">11 de octubre de 2025</time> | Clima</small>
+                                        </p>
+                                        <p class="lead fw-normal">
+                                            Las nevadas más intensas en décadas han dejado incomunicadas a varias poblaciones del norte.
+                                        </p>
+                                    </div>
+                                    <div class="image-wrapper shadow-sm">
+                                        <img src="../../../assets/images/news/clima/winter.jpg" alt="Nevadas históricas paralizan el norte del país" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                            </article>
+
+                            <div class="article-body px-1">
+                            <p>Nevadas intensas están afectando el norte de Europa, causando interrupciones significativas en el transporte y generando riesgos para la población en varias regiones.</p>
+                            <p>Las fuertes precipitaciones de nieve han acumulado grandes cantidades en carreteras, calles y autopistas, lo que ha obligado a las autoridades a implementar cierres temporales para garantizar la seguridad de los conductores.</p>
+                            <p>Se han reportado retrasos y cancelaciones de vuelos en aeropuertos internacionales y regionales, así como interrupciones en servicios de trenes y transporte público debido a vías bloqueadas por la nieve y el hielo.</p>
+                            <p>Las condiciones extremas han provocado accidentes de tráfico y dificultades para los vehículos de emergencia, lo que ha llevado a que los servicios de rescate y mantenimiento trabajen sin descanso para despejar las rutas principales.</p>
+                            <p>Se recomienda a los ciudadanos evitar desplazamientos innecesarios y utilizar transporte público solo cuando sea seguro, además de seguir las indicaciones de las autoridades locales y los informes meteorológicos actualizados.</p>
+                            <p>Los gobiernos regionales han activado planes de contingencia, que incluyen refugios temporales, asistencia a personas vulnerables y distribución de equipos de protección y suministros esenciales en zonas afectadas.</p>
+                            <p>Los meteorólogos advierten que las nevadas podrían continuar durante varios días, y que se esperan bajas temperaturas y posibles tormentas de nieve que podrían agravar la situación, especialmente en zonas rurales y montañosas.</p>
+                            <p>Las autoridades han solicitado colaboración de la población para reportar cualquier incidente, mantenerse informado a través de canales oficiales y tomar precauciones adicionales para protegerse del frío extremo.</p>
+                            <p>Además, se ha recomendado a los conductores equipar sus vehículos con neumáticos de invierno, cadenas y kits de emergencia, y mantenerse alerta ante cambios bruscos en el clima que puedan afectar la seguridad en carretera.</p>
+                            <p>En general, las nevadas están generando un impacto considerable en la vida cotidiana, obligando a muchas personas a trabajar desde casa y a planificar sus desplazamientos con anticipación para evitar riesgos innecesarios.</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Sidebar Column -->
+                    <div class="col-lg-3">
+                        <aside class="aside-sidebar">
+                            <!-- Sección Noticias Recientes -->
+                            <section class="opinion mt-1">
+                                <h2 class="section-title h5 mb-3">Noticias Recientes</h2>
+
+                                <article class="opinion-card mb-4">
+                                    <a href="noticia-del-calor.html" aria-label="Leer noticia: Ola de calor extremo afecta a varias regiones del país" class="text-decoration-none text-dark">
+                                        <img src="../../../assets/images/news/clima/calor.jpg" alt="Ola de calor extremo afecta a varias regiones del país" loading="lazy" class="img-fluid rounded mb-2">
+                                        <h3 class="h6 fw-bold">Ola de calor extremo afecta a varias regiones del país</h3>
+                                        <p class="small text-muted">
+                                            Las temperaturas máximas superan los 40 grados en varias provincias, generando alertas por riesgos para la salud.
+                                        </p>
+                                    </a>
+                                </article>
+
+                                <article class="opinion-card mb-4">
+                                    <a href="noticia-del-tornado.html" aria-label="Leer noticia: Tornado causa graves daños en el centro del país" class="text-decoration-none text-dark">
+                                        <img src="../../../assets/images/news/clima/tornado.jpg" alt="Tornado causa graves daños en el centro del país" loading="lazy" class="img-fluid rounded mb-2">
+                                        <h3 class="h6 fw-bold">Tornado causa graves daños en el centro del país</h3>
+                                        <p class="small text-muted">
+                                            Un tornado de categoría F3 ha dejado un rastro de destrucción en varias comunidades del interior.
+                                        </p>
+                                    </a>
+                                </article>
+
+                                <article class="opinion-card mb-4">
+                                    <a href="noticia-sobre-huracan.html" aria-label="Leer noticia: Huracán se forma en el Atlántico y amenaza la costa este" class="text-decoration-none text-dark">
+                                        <img src="../../../assets/images/news/clima/ciclon.jpg" alt="Huracán se forma en el Atlántico y amenaza la costa este" loading="lazy" class="img-fluid rounded mb-2">
+                                        <h3 class="h6 fw-bold">Huracán se forma en el Atlántico y amenaza la costa este</h3>
+                                        <p class="small text-muted">
+                                            Las autoridades han emitido alertas de evacuación ante la aproximación de un huracán categoría 2.
+                                        </p>
+                                    </a>
+                                </article>
+
+                                <article class="opinion-card">
+                                    <a href="noticia-sobre-inundaciones.html" aria-label="Leer noticia: Inundaciones afectan a miles de personas en el sur" class="text-decoration-none text-dark">
+                                        <img src="../../../assets/images/news/clima/inundacion.jpg" alt="Inundaciones afectan a miles de personas en el sur" loading="lazy" class="img-fluid rounded mb-2">
+                                        <h3 class="h6 fw-bold">Inundaciones afectan a miles de personas en el sur</h3>
+                                        <p class="small text-muted">
+                                            Las lluvias torrenciales han causado desbordamiento de ríos, afectando a comunidades enteras.
+                                        </p>
+                                    </a>
+                                </article>
+                            </section>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+          </main>
+
+                  
+            
+     <!-- Footer Global -->
+     <footer class="footer-main"> 
+         <div class="container-fluid footer-content">
               <!-- Derechos reservados -->
-              <small>&copy; 2025 NewsHub. Todos los derechos reservados.</small>
+              <small>&copy; 2026 NewsHub. Todos los derechos reservados.</small>
 
               <!-- Íconos de redes sociales -->
               <div class="social-icons">
-                   <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
-                    <img src="../../../assets/images/iconos/redes/facebook.png" alt="Ir a Facebook de NewsHub">
+                   <a href="https://facebook.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
+                    <i class="bi bi-facebook"></i>
                    </a>
 
-                   <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
-                    <img src="../../../assets/images/iconos/redes/x.png" alt="Ir a X de NewsHub">
+                   <a href="https://twitter.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
+                    <i class="bi bi-twitter-x"></i>
                    </a>
 
-                   <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
-                    <img src="../../../assets/images/iconos/redes/instagram.png" alt="Ir a Instagram de NewsHub">
+                   <a href="https://instagram.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
+                    <i class="bi bi-instagram"></i>
                    </a>
               </div>
 
                  <!-- Enlaces legales -->
                 <div class="footer-links">
-                  <a href="../../legal/privacy.html" title="Política de privacidad">Política de Privacidad</a> |
-                  <a href="../../legal/terms.html" title="Términos de uso">Términos de Uso</a>
-                </div>
-
-                <!-- Atribución de iconos -->
-                <div class="attribution">
-                   <small>
-                    <a href="https://www.flaticon.com/free-icons/instagram" title="Instagram icons" rel="nofollow noopener noreferrer">Instagram icons by Grow studio - Flaticon</a> |
-                    <a href="https://www.flaticon.com/free-icons/facebook" title="Facebook icons" rel="nofollow noopener noreferrer">Facebook icons by Freepik - Flaticon</a> |
-                    <a href="https://www.flaticon.com/free-icons/brands-and-logotypes" title="Brands icons" rel="nofollow noopener noreferrer">Brands icons by Freepik - Flaticon</a>
-                  </small>
+                  <a href="../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a> |
+                  <a href="../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
                 </div>
             </div>
-        </footer>
+
+   </footer>
+     
+       <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

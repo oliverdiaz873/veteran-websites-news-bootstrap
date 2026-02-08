@@ -2,14 +2,73 @@
    ESTILOS PARA LA NOTICIA INDIVIDUAL (Cuerpo)
 ================================== */
 
+/* Estilos para el Breadcrumb */
+.breadcrumb-container {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 0px;
+}
+
+.breadcrumb-item a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  color: #ff2929;
+}
+
+body.dark-mode .breadcrumb-container {
+  background-color: var(--dark-card-bg);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+body.dark-mode .breadcrumb {
+  color: var(--dark-text);
+}
+
+body.dark-mode .breadcrumb-item a {
+  color: #ffffff;
+}
+
+body.dark-mode .breadcrumb-item a:hover {
+  color: #ff2929;
+}
+
+body.dark-mode .breadcrumb-item + .breadcrumb-item::before {
+  color: #ffffff;
+}
+
+body.dark-mode .breadcrumb-item.active {
+  color: #adb5bd;
+}
+
+/* Truncamiento para móviles */
+@media (max-width: 576px) {
+  .breadcrumb-item a {
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .breadcrumb-item.active {
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 span {
   font-size: 1.5rem;
 }
 
 /* Estilo para h1 en páginas de noticias */
-h1 {
-  font-family: sans-serif, Helvetica;
-  font-weight: 700;
+.article-wrapper .h1 {
+  font-family: sans-serif, Helvetica !important;
+  font-size: 30px !important;
+  line-height: 1.2 !important;
 }
 
 /* Contenedor unificado para que la cabecera y el cuerpo tengan el mismo fondo */

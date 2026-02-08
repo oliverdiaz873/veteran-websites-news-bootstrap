@@ -13,145 +13,247 @@
     <meta name="theme-color" content="#2196f3">
 
     <!-- etiquetas Open Graph -->
-    <meta property="og:title" content="Juez ordena prisión preventiva para acusado de homicidio múltiple.">
+    <meta property="og:title" content="Juez ordena prisión preventiva para acusado de homicidio múltiple - Noticias Justicia">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost/newsHub/noticias/justicia/noticia-sobre-homicidio-multiple.html">  
+    <meta property="og:url" content="http://localhost/newsHub/pages/news/justicia/noticia-sobre-homicidio-multiple.html">  
     <meta property="og:image" content="../../../assets/images/news/justicia/juez.jpg"> 
-    <meta property="og:description" content="Juez ordena prisión preventiva para acusado de homicidio múltiple.">
+    <meta property="og:description" content="Juez ordena prisión preventiva para acusado de homicidio múltiple. Noticias en NewsHub.">
     <meta property="og:site_name" content="NewsHub">
     <meta property="og:locale" content="es_ES"> 
 
+    <!--  Twitter Cards para X-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Juez ordena prisión preventiva para acusado de homicidio múltiple">
+    <meta name="twitter:description" content="Juez ordena prisión preventiva para acusado de homicidio múltiple. Noticias en NewsHub.">
+    <meta name="twitter:image" content="../../../assets/images/news/justicia/juez.jpg">
+
     <!-- Título y CSS -->
-    <title>Juez ordena prisión preventiva para acusado de homicidio múltiple - NewsHub</title>
-    <link rel="stylesheet" href="../../../assets/css/news.css">
+    <title>Juez ordena prisión preventiva para acusado de homicidio múltiple | NewsHub</title>
+    <link rel="stylesheet" href="../../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link rel="stylesheet" href="../../../assets/css/components/header.css">
+    <link rel="stylesheet" href="../../../assets/css/components/footer.css">
+    <link rel="stylesheet" href="../../../assets/css/dark.css">
+    <link rel="stylesheet" href="../../../assets/css/pages/article.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
     <!-- Favicons -->
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-16x16.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="../../../assets/images/iconos/favicon/favicon16x16.jpg" type="image/jpg" sizes="16x16">
+    <link rel="icon" href="../../../assets/images/iconos/favicon/favicon32x32.jpg" type="image/jpg" sizes="32x32">
+    <link rel="icon" href="../../../assets/images/iconos/favicon/favicon48x48.jpg" type="image/jpg" sizes="48x48">
+
+    <!-- scripts -->
+    <script src="../../../assets/js/search.js" defer></script>
+    <script src="../../../assets/js/dark.js" defer></script>
 
   </head>
 
-
    <body>
-           <!--header-->
-          <header>
+           <!-- Header Global -->
+          <header class="header-main sticky-top">
+              <!--Bootstrap Navbar : Supported content -->
+              <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <div class="navbar-brand">
+                <a href="../../index.html" aria-label="Ir a la página principal de NewsHub" class="text-decoration-none text-dark d-flex align-items-center gap-2">
+                  <img src="../../../assets/images/logo/logo.jpg" alt="Logo NewsHub" class="logo" loading="lazy">
+                  <span class="d-inline-block mb-0">NewsHub</span>
+                </a>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <!-- icono del menu hamburguesa -->
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/politica.html">Política</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/internacional.html">Internacional</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/economia.html">Economía</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/salud.html">Salud</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/deporte.html">Deporte</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/clima.html">Clima</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/justicia.html">Justicia</a>
+                  </li>
+                </ul>
+             
+                <!-- input buscador -->
+                <form class="d-flex" role="search">
+                  <input class="form-control me-1" type="search" placeholder="Buscar noticias..." aria-label="Search"/>
+                  <button class="btn btn-outline-primary" type="submit">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </form>
+                
+                <!-- Botón modo oscuro -->
+                <button class="btn btn-outline-primary ms-1" type="button" id="darkModeToggle" aria-label="Cambiar modo oscuro">
+                  <i class="bi bi-brightness-high-fill"></i>
+                </button>
 
-                <h1 class="logo">  
-                    <a href="../../index.html" aria-label="Ir a la página principal de NewsHub">  <!-- logo clickeable-->  <!--aria-label proporciona una descripción textual de un elemento para los lectores de pantalla -->
-                        <img src="../../../assets/images/logo/logo.jpg" alt="Logo NewsHub">
-                          NewsHub
-                    </a> 
-                </h1>
-               
-              <nav> <!--barra de navegacion-->
-                  <ul> <!--la clase active indica la pagina activa-->
-                    <li><a href="../../index.html" class="icon_animation" aria-label="Inicio"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación"> Inicio</a></li>
-                    <li><a href="../../category/politica.html" class="icon_animation" aria-label="Sección Política"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación"> Política</a></li>
-                    <li><a href="../../category/internacional.html" class="icon_animation" aria-label="Sección Internacional"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación"> Internacional</a></li>
-                    <li><a href="../../category/economia.html" class="icon_animation" aria-label="Sección Economía"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación"  > Economía</a></li>
-                    <li><a href="../../category/salud.html" class="icon_animation" aria-label="Sección Salud"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación" > Salud</a></li>
-                    <li><a href="../../category/deporte.html" class="icon_animation" aria-label="Sección Deporte"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación" > Deporte</a></li>
-                    <li><a href="../../category/clima.html" class="icon_animation" aria-label="Sección Clima"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación" > Clima</a></li>
-                    <li><a href="../../category/justicia.html" class="icon_animation" aria-label="Sección Justicia"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación" > Justicia</a></li>
-                 </ul>
-              </nav>
-              
+              </div>
+            </div>
+          </nav>
           </header>
 
-
-          
-          <!--main-->
-          <div class="container">
-          
-            <main class="noticia-individual">
-                <article>
-                   <h2 class="section-title">Juez ordena prisión preventiva para acusado de homicidio múltiple</h2>
-                     
-                        <p id="fecha-noticia">
-                          <small>
-                             Publicado el <time datetime="2025-10-11">11 de octubre de 2025</time> | Categoría: Justicia
-                          </small>
-                        </p>
-                        
-                       <figure>
-                        <img src="../../../assets/images/news/justicia/juez.jpg" alt="Juez ordena prisión preventiva para acusado de homicidio múltiple.">
-                        <figcaption>El juez se prepara para golpear el martillo mientras el acusado escucha atentamente la lectura de la medida judicial durante la audiencia.</figcaption>
-                       </figure>
-                  
-                       <p>El juez del caso ha ordenado la prisión preventiva para el acusado de homicidio múltiple, tras evaluar la gravedad de los hechos y los riesgos de fuga.</p>
-
-                       <p>La decisión se tomó luego de una audiencia en la que se presentaron pruebas contundentes que vinculan al acusado con varios homicidios ocurridos en la ciudad durante los últimos meses.</p>
-
-                       <p>Según el fiscal a cargo del caso, existe un alto riesgo de que el imputado interfiera en la investigación si se le otorgara libertad provisional, razón por la cual la medida cautelar es considerada necesaria.</p>
-
-                       <p>La defensa del acusado ha manifestado que respetará la decisión del juez, pero adelantó que presentará recursos legales para solicitar una revisión de la medida en los próximos días.</p>
-
-                       <p>Familiares de las víctimas han recibido con alivio la decisión, destacando la importancia de garantizar que el acusado permanezca bajo custodia mientras avanza el proceso judicial.</p>
-
-                       <p>El juez indicó que la prisión preventiva se mantendrá hasta que se lleve a cabo el juicio, asegurando así la integridad del proceso y la seguridad pública.</p>
-
-                       <p>Las autoridades de seguridad han reforzado las medidas en torno al acusado durante su traslado al centro penitenciario, para evitar cualquier intento de fuga o alteración del orden público.</p>
-
-                       <p>Expertos legales señalan que la decisión envía un mensaje claro sobre la firmeza del sistema judicial frente a delitos graves, y subrayan la importancia de que se garantice el debido proceso para todas las partes involucradas.</p>
-
-
-             </article>
-         </main>
-
-                  
-              
-            <!-- aside -->
-            <div class="aside-publicidad" aria-label="Publicidad" role="complementary">   <!-- el atributo role se usa para definir el papel o función semántica de un elemento para lectores de pantalla -->
-                <h3>PUBLICIDAD</h3>                                                       <!-- el valor complementary indica que este elemento es un complemento de contenido, es decir, no es contenido principal, sino información adicional.-->
-                   <aside>
-                    <!-- divs rotativos con las imagenes de publicidad de fondo -->
-                    <div class="imagen ad1" aria-hidden="true"></div>        <!-- aria-hidden="true" es un atributo de accesibilidad que le dice a los lectores de pantalla que ignoren el elemento -->
-                    <div class="imagen ad2" aria-hidden="true"></div>           
-                    <div class="imagen ad3" aria-hidden="true"></div>
-                   </aside>
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb" class="breadcrumb-container">
+            <div class="container-fluid">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="../../index.html">Inicio</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="../../category/justicia.html">Justicia</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Juez ordena prisión preventiva para acusado de homicidio múltiple</li>
+              </ol>
             </div>
-  
-    </div>
+          </nav>
 
-   
-       <!-- footer-->
-           <footer>
-             <div class="footer-content">
+          <!--main-->
+          <main class="main-content">
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <!-- Main Content Column -->
+                    <div class="col-lg-9">
+                        <div class="article-wrapper shadow-sm mb-5">
+                            <article class="featured-article mb-4">
+                                <div class="d-flex align-items-start gap-4">
+                                    <div class="content">
+                                        <h1 class="h1 mb-3">Juez ordena prisión preventiva para acusado de homicidio múltiple</h1>
+                                        <p class="text-muted mb-2">
+                                            <small>Publicado el <time datetime="2025-10-11">11 de octubre de 2025</time> | Justicia</small>
+                                        </p>
+                                        <p class="lead fw-normal">
+                                            El juez del caso ha dictado prisión preventiva contra el acusado, considerando necesario asegurar su presencia en el juicio debido a la gravedad de los cargos y el riesgo de fuga.
+                                        </p>
+                                    </div>
+                                    <div class="image-wrapper shadow-sm">
+                                        <img src="../../../assets/images/news/justicia/juez.jpg" alt="Juez ordena prisión preventiva para acusado de homicidio múltiple" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                            </article>
+
+                            <div class="article-body px-1">
+                            <p>La decisión se tomó luego de una audiencia en la que se presentaron pruebas contundentes que vinculan al acusado con varios homicidios ocurridos en la ciudad durante los últimos meses. El fiscal argumentó que la libertad del imputado representaría un peligro para la sociedad.</p>
+
+                            <p>La defensa del acusado manifestó que respetará la decisión del juez, pero adelantó que presentará recursos legales para solicitar una revisión de la medida. Mientras tanto, el acusado permanecerá en un centro de detención de máxima seguridad.</p>
+
+                            <p>Familiares de las víctimas han recibido con alivio la decisión, destacando la importancia de que el proceso judicial avance sin contratiempos. Las autoridades han reforzado la seguridad en torno al caso para evitar incidentes.</p>
+
+                            <p>Expertos legales señalan que la prisión preventiva es una medida excepcional pero justificada en casos de extrema gravedad como este. El juicio está programado para comenzar en los próximos meses, y se espera que sea uno de los más mediáticos del año.</p>
+
+                            <p>La comunidad sigue atenta al desarrollo de los acontecimientos, esperando que se haga justicia para las víctimas y sus familias.</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Sidebar Column -->
+                    <div class="col-lg-3">
+                        <aside class="aside-sidebar">
+                            
+                            <!-- Sección Noticias Recientes -->
+                            <section class="opinion mt-1">
+                                <h2 class="section-title h5 mb-3">Noticias Recientes</h2>
+
+                                <article class="opinion-card mb-4">
+                                    <a href="noticia-del-criminal.html" aria-label="Leer noticia: Condenan a cadena perpetua a líder criminal" class="text-decoration-none text-dark">
+                                        <img src="../../../assets/images/news/justicia/condena.jpg" alt="Condenan a cadena perpetua a líder criminal" loading="lazy" class="img-fluid rounded mb-2">
+                                        <h3 class="h6 fw-bold">Condenan a cadena perpetua a líder criminal</h3>
+                                        <p class="small text-muted">
+                                            Líder de organización internacional recibe sentencia máxima.
+                                        </p>
+                                    </a>
+                                </article>
+
+                                <article class="opinion-card mb-4">
+                                    <a href="noticia-del-fraude.html" aria-label="Leer noticia: Detienen a exfuncionario por fraude" class="text-decoration-none text-dark">
+                                        <img src="../../../assets/images/news/justicia/arrested.jpg" alt="Detienen a exfuncionario por fraude" loading="lazy" class="img-fluid rounded mb-2">
+                                        <h3 class="h6 fw-bold">Detienen a exfuncionario por fraude</h3>
+                                        <p class="small text-muted">
+                                            Acusado de desviar fondos millonarios a cuentas en el extranjero.
+                                        </p>
+                                    </a>
+                                </article>
+
+                                <article class="opinion-card mb-4">
+                                    <a href="noticia-del-homicidio.html" aria-label="Leer noticia: Investigan homicidio en el centro" class="text-decoration-none text-dark">
+                                        <img src="../../../assets/images/news/justicia/homicidio.jpg" alt="Investigan homicidio en el centro" loading="lazy" class="img-fluid rounded mb-2">
+                                        <h3 class="h6 fw-bold">Investigan homicidio en el centro</h3>
+                                        <p class="small text-muted">
+                                            Autoridades buscan pistas tras incidente nocturno.
+                                        </p>
+                                    </a>
+                                </article>
+
+                                <article class="opinion-card">
+                                    <a href="noticia-sobre-empresa.html" aria-label="Leer noticia: Fiscalia inicia juicio contra empresa" class="text-decoration-none text-dark">
+                                        <img src="../../../assets/images/news/justicia/juicio.jpg" alt="Fiscalia inicia juicio contra empresa" loading="lazy" class="img-fluid rounded mb-2">
+                                        <h3 class="h6 fw-bold">Fiscalia inicia juicio contra empresa</h3>
+                                        <p class="small text-muted">
+                                            Compañía acusada de evasión fiscal millonaria enfrenta proceso.
+                                        </p>
+                                    </a>
+                                </article>
+                            </section>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+          </main>
+
+                  
+            
+
+     <!-- Footer Global -->
+     <footer class="footer-main"> 
+         <div class="container-fluid footer-content">
               <!-- Derechos reservados -->
-              <small>&copy; 2025 NewsHub. Todos los derechos reservados.</small>
+              <small>&copy; 2026 NewsHub. Todos los derechos reservados.</small>
 
               <!-- Íconos de redes sociales -->
               <div class="social-icons">
-                   <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
-                    <img src="../../../assets/images/iconos/redes/facebook.png" alt="Ir a Facebook de NewsHub">
+                   <a href="https://facebook.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
+                    <i class="bi bi-facebook"></i>
                    </a>
 
-                   <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
-                    <img src="../../../assets/images/iconos/redes/x.png" alt="Ir a X de NewsHub">
+                   <a href="https://twitter.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
+                    <i class="bi bi-twitter-x"></i>
                    </a>
 
-                   <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
-                    <img src="../../../assets/images/iconos/redes/instagram.png" alt="Ir a Instagram de NewsHub">
+                   <a href="https://instagram.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
+                    <i class="bi bi-instagram"></i>
                    </a>
               </div>
 
                  <!-- Enlaces legales -->
                 <div class="footer-links">
-                  <a href="../../legal/privacy.html" title="Política de privacidad">Política de Privacidad</a> |
-                  <a href="../../legal/terms.html" title="Términos de uso">Términos de Uso</a>
-                </div>
-
-                <!-- Atribución de iconos -->
-                <div class="attribution">
-                   <small>
-                    <a href="https://www.flaticon.com/free-icons/instagram" title="Instagram icons" rel="nofollow noopener noreferrer">Instagram icons by Grow studio - Flaticon</a> |
-                    <a href="https://www.flaticon.com/free-icons/facebook" title="Facebook icons" rel="nofollow noopener noreferrer">Facebook icons by Freepik - Flaticon</a> |
-                    <a href="https://www.flaticon.com/free-icons/brands-and-logotypes" title="Brands icons" rel="nofollow noopener noreferrer">Brands icons by Freepik - Flaticon</a>
-                  </small>
+                  <a href="../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a> |
+                  <a href="../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
                 </div>
             </div>
-        </footer>
+
+    </footer>
+      
+       <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

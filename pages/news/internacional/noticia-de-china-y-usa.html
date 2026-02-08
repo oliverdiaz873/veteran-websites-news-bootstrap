@@ -15,141 +15,249 @@
     <!-- etiquetas Open Graph -->
     <meta property="og:title" content="Nuevas conversaciones entre China y Estados Unidos marcan un giro en la política internacional">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost/newsHub/noticias/internacional/noticia-de-china-y-usa.html">  
+    <meta property="og:url" content="http://localhost/newsHub/pages/news/internacional/noticia-de-china-y-usa.html">  
     <meta property="og:image" content="../../../assets/images/news/internacional/china.jpg"> 
     <meta property="og:description" content="Nuevas conversaciones entre China y Estados Unidos marcan un giro en la política internacional. Noticias en NewsHub.">
     <meta property="og:site_name" content="NewsHub">
     <meta property="og:locale" content="es_ES"> 
 
+    <!--  Twitter Cards para X-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nuevas conversaciones entre China y Estados Unidos marcan un giro en la política internacional">
+    <meta name="twitter:description" content="Nuevas conversaciones entre China y Estados Unidos marcan un giro en la política internacional. Noticias en NewsHub.">
+    <meta name="twitter:image" content="../../../assets/images/news/internacional/china.jpg">
+
     <!-- Título y CSS -->
     <title>Nuevas conversaciones entre China y Estados Unidos marcan un giro en la política internacional | NewsHub</title>
-    <link rel="stylesheet" href="../../../assets/css/news.css">
+    <link rel="stylesheet" href="../../../assets/css/fonts.css">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link rel="stylesheet" href="../../../assets/css/components/header.css">
+    <link rel="stylesheet" href="../../../assets/css/components/footer.css">
+    <link rel="stylesheet" href="../../../assets/css/dark.css">
+    <link rel="stylesheet" href="../../../assets/css/pages/article.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
     <!-- Favicons -->
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-16x16.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="../../../assets/images/iconos/favicon/icon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="../../../assets/images/iconos/favicon/favicon16x16.jpg" type="image/jpg" sizes="16x16">
+    <link rel="icon" href="../../../assets/images/iconos/favicon/favicon32x32.jpg" type="image/jpg" sizes="32x32">
+    <link rel="icon" href="../../../assets/images/iconos/favicon/favicon48x48.jpg" type="image/jpg" sizes="48x48">
+
+    <!-- scripts -->
+    <script src="../../../assets/js/search.js" defer></script>
+    <script src="../../../assets/js/dark.js" defer></script>
 
   </head>
 
-
    <body>
-           <!--header-->
-          <header>
+           <!-- Header Global -->
+          <header class="header-main sticky-top">
+              <!--Bootstrap Navbar : Supported content -->
+              <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <div class="navbar-brand">
+                <a href="../../index.html" aria-label="Ir a la página principal de NewsHub" class="text-decoration-none text-dark d-flex align-items-center gap-2">
+                  <img src="../../../assets/images/logo/logo.jpg" alt="Logo NewsHub" class="logo" loading="lazy">
+                  <span class="d-inline-block mb-0">NewsHub</span>
+                </a>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <!-- icono del menu hamburguesa -->
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/politica.html">Política</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/internacional.html">Internacional</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/economia.html">Economía</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/salud.html">Salud</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/deporte.html">Deporte</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/clima.html">Clima</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../category/justicia.html">Justicia</a>
+                  </li>
+                </ul>
+             
+                <!-- input buscador -->
+                <form class="d-flex" role="search">
+                  <input class="form-control me-1" type="search" placeholder="Buscar noticias..." aria-label="Search"/>
+                  <button class="btn btn-outline-primary" type="submit">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </form>
+                
+                <!-- Botón modo oscuro -->
+                <button class="btn btn-outline-primary ms-1" type="button" id="darkModeToggle" aria-label="Cambiar modo oscuro">
+                  <i class="bi bi-brightness-high-fill"></i>
+                </button>
 
-                <h1 class="logo">  
-                    <a href="../../index.html" aria-label="Ir a la página principal de NewsHub">  <!-- logo clickeable-->  <!--aria-label proporciona una descripción textual de un elemento para los lectores de pantalla -->
-                        <img src="../../../assets/images/logo/logo.jpg" alt="Logo NewsHub">
-                           NewsHub 
-                    </a> 
-                </h1>
-               
-              <nav> <!--barra de navegacion-->
-                  <ul> <!--la clase active indica la pagina activa-->
-                    <li><a href="../../index.html" class="icon_animation" aria-label="Inicio"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación"> Inicio</a></li>
-                    <li><a href="../../category/politica.html" class="icon_animation" aria-label="Sección Política"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación"> Política</a></li>
-                    <li><a href="../../category/internacional.html" class="icon_animation" aria-label="Sección Internacional"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación"> Internacional</a></li>
-                    <li><a href="../../category/economia.html" class="icon_animation" aria-label="Sección Economía"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación"  > Economía</a></li>
-                    <li><a href="../../category/salud.html" class="icon_animation" aria-label="Sección Salud"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación" > Salud</a></li>
-                    <li><a href="../../category/deporte.html" class="icon_animation" aria-label="Sección Deporte"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación" > Deporte</a></li>
-                    <li><a href="../../category/clima.html" class="icon_animation" aria-label="Sección Clima"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación" > Clima</a></li>
-                    <li><a href="../../category/justicia.html" class="icon_animation" aria-label="Sección Justicia"><img src="../../../assets/images/iconos/nav-icon/go.png" alt="Icono de navegación" > Justicia</a></li>
-                 </ul>
-              </nav>
-              
+              </div>
+            </div>
+          </nav>
           </header>
 
-
-          
-          <!--main-->
-          <div class="container">
-          
-            <main class="noticia-individual">
-                <article>
-                   <h2 class="section-title">Nuevas conversaciones entre China y Estados Unidos marcan un giro en la política internacional</h2>
-                     
-                        <p id="fecha-noticia">
-                          <small>
-                             Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Categoría: Internacional
-                          </small>
-                        </p>
-                        
-                       <figure>
-                        <img src="../../../assets/images/news/internacional/china.jpg" alt="Nuevas conversaciones entre China y Estados Unidos marcan un giro en la política internacional">
-                       </figure>
-                  
-                    <p>Nuevas conversaciones entre China y Estados Unidos han marcado un giro significativo en la política internacional, con el objetivo de mejorar las relaciones bilaterales y abordar conflictos económicos y diplomáticos recientes.</p>
-
-                    <p>Los líderes de ambos países se reunieron en un encuentro diplomático de alto nivel, donde discutieron temas clave como comercio, seguridad regional, cambio climático y cooperación tecnológica.</p>
-
-                    <p>Fuentes oficiales indicaron que las negociaciones fueron constructivas, destacando la voluntad de ambas naciones de encontrar soluciones que eviten tensiones y promuevan la estabilidad global.</p>
-
-                    <p>Analistas internacionales consideran que este acercamiento podría tener un impacto positivo en la economía mundial, al reducir incertidumbres en mercados financieros y fortalecer acuerdos comerciales estratégicos.</p>
-
-                    <p>Se espera que, en las próximas semanas, se anuncien acuerdos específicos que faciliten intercambios económicos y tecnológicos, así como mecanismos de cooperación para abordar desafíos globales como la seguridad cibernética y la sostenibilidad ambiental.</p>
-
-                    <p>Representantes de organizaciones internacionales han celebrado el inicio de estas conversaciones, subrayando la importancia del diálogo diplomático para mantener la paz y la cooperación entre potencias mundiales.</p>
-
-                    <p>Ciudadanos y empresas en ambos países observan con interés los resultados de estas negociaciones, ya que podrían influir en inversiones, comercio y relaciones culturales entre China y Estados Unidos.</p>
-
-                    <p>El mundo sigue atento a estos desarrollos, confiando en que el diálogo abierto y la negociación estratégica conduzcan a un escenario internacional más estable y colaborativo.</p>
-
-             </article>
-         </main>
-
-                  
-              
-            <!-- aside -->
-            <div class="aside-publicidad" aria-label="Publicidad" role="complementary">   <!-- el atributo role se usa para definir el papel o función semántica de un elemento para lectores de pantalla -->
-                <h3>PUBLICIDAD</h3>                                                       <!-- el valor complementary indica que este elemento es un complemento de contenido, es decir, no es contenido principal, sino información adicional.-->
-                   <aside>
-                    <!-- divs rotativos con las imagenes de publicidad de fondo -->
-                    <div class="imagen ad1" aria-hidden="true"></div>        <!-- aria-hidden="true" es un atributo de accesibilidad que le dice a los lectores de pantalla que ignoren el elemento -->
-                    <div class="imagen ad2" aria-hidden="true"></div>           
-                    <div class="imagen ad3" aria-hidden="true"></div>
-                   </aside>
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb" class="breadcrumb-container">
+            <div class="container-fluid">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="../../index.html">Inicio</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="../../category/internacional.html">Internacional</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Nuevas conversaciones entre China y Estados Unidos marcan un giro en la política internacional</li>
+              </ol>
             </div>
-  
-    </div>
+          </nav>
 
-   
-       <!-- footer-->
-           <footer>
-             <div class="footer-content">
+          <!--main-->
+          <main class="main-content">
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <!-- Main Content Column -->
+                    <div class="col-lg-9">
+                        <div class="article-wrapper shadow-sm mb-5">
+                            <article class="featured-article mb-4">
+                                <div class="d-flex align-items-start gap-4">
+                                    <div class="content">
+                                        <h1 class="h1 mb-3">Nuevas conversaciones entre China y Estados Unidos marcan un giro en la política internacional</h1>
+                                        <p class="text-muted mb-2">
+                                            <small>Publicado el <time datetime="2025-10-04">4 de octubre de 2025</time> | Internacional</small>
+                                        </p>
+                                        <p class="lead fw-normal">
+                                            Nuevas conversaciones entre China y Estados Unidos han marcado un giro significativo en la política internacional, con el objetivo de mejorar las relaciones bilaterales y abordar conflictos económicos y diplomáticos recientes.
+                                        </p>
+                                    </div>
+                                    <div class="image-wrapper shadow-sm">
+                                        <img src="../../../assets/images/news/internacional/china.jpg" alt="Nuevas conversaciones entre China y Estados Unidos marcan un giro en la política internacional" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                            </article>
+
+                            <div class="article-body px-1">
+                            <p>Los líderes de ambos países se reunieron en un encuentro diplomático de alto nivel, donde discutieron temas clave como comercio, seguridad regional, cambio climático y cooperación tecnológica.</p>
+
+                            <p>Fuentes oficiales indicaron que las negociaciones fueron constructivas, destacando la voluntad de ambas naciones de encontrar soluciones que eviten tensiones y promuevan la estabilidad global.</p>
+
+                            <p>Analistas internacionales consideran que este acercamiento podría tener un impacto positivo en la economía mundial, al reducir incertidumbres en mercados financieros y fortalecer acuerdos comerciales estratégicos.</p>
+
+                            <p>Se espera que, en las próximas semanas, se anuncien acuerdos específicos que faciliten intercambios económicos y tecnológicos, así como mecanismos de cooperación para abordar desafíos globales como la seguridad cibernética y la sostenibilidad ambiental.</p>
+
+                            <p>Representantes de organizaciones internacionales han celebrado el inicio de estas conversaciones, subrayando la importancia del diálogo diplomático para mantener la paz y la cooperación entre potencias mundiales.</p>
+
+                            <p>Ciudadanos y empresas en ambos países observan con interés los resultados de estas negociaciones, ya que podrían influir en inversiones, comercio y relaciones culturales entre China y Estados Unidos.</p>
+
+                            <p>El mundo sigue atento a estos desarrollos, confiando en que el diálogo abierto y la negociación estratégica conduzcan a un escenario internacional más estable y colaborativo.</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Sidebar Column -->
+                    <div class="col-lg-3">
+                        <aside class="aside-sidebar">
+                            
+                            <!-- Sección Noticias Recientes -->
+                            <section class="opinion mt-1">
+                                <h2 class="section-title h5 mb-3">Noticias Recientes</h2>
+
+                                <article class="opinion-card mb-4">
+                                    <a href="noticia-de-guerra.html" aria-label="Leer noticia: La guerra de Ucrania llega a su fin" class="text-decoration-none text-dark">
+                                        <img src="../../../assets/images/news/internacional/guerra.jpg" alt="La guerra de Ucrania llega a su fin" loading="lazy" class="img-fluid rounded mb-2">
+                                        <h3 class="h6 fw-bold">La guerra de Ucrania llega a su fin</h3>
+                                        <p class="small text-muted">
+                                            Tras años de conflicto, se firma un acuerdo de paz histórico para la región.
+                                        </p>
+                                    </a>
+                                </article>
+
+                                <article class="opinion-card mb-4">
+                                    <a href="noticia-de-israel-e-iran.html" aria-label="Leer noticia: Crecen las tensiones entre Israel e Irán" class="text-decoration-none text-dark">
+                                        <img src="../../../assets/images/news/internacional/israel_and_iran.jpg" alt="Crecen las tensiones entre Israel e Irán" loading="lazy" class="img-fluid rounded mb-2">
+                                        <h3 class="h6 fw-bold">Crecen las tensiones entre Israel e Irán</h3>
+                                        <p class="small text-muted">
+                                            La región se mantiene en alerta ante el aumento de la retórica hostil.
+                                        </p>
+                                    </a>
+                                </article>
+
+                                <article class="opinion-card mb-4">
+                                    <a href="noticia-de-la-union-europea.html" aria-label="Leer noticia: Unión Europea impulsa energías renovables" class="text-decoration-none text-dark">
+                                        <img src="../../../assets/images/news/internacional/europa.jpg" alt="Unión Europea impulsa energías renovables" loading="lazy" class="img-fluid rounded mb-2">
+                                        <h3 class="h6 fw-bold">Unión Europea impulsa energías renovables</h3>
+                                        <p class="small text-muted">
+                                            Nuevas directivas buscan acelerar la transición verde en el continente.
+                                        </p>
+                                    </a>
+                                </article>
+
+                                <article class="opinion-card">
+                                    <a href="noticia-del-accidente.html" aria-label="Leer noticia: Tragedia en carretera en Alemania" class="text-decoration-none text-dark">
+                                        <img src="../../../assets/images/news/internacional/accidente.avif" alt="Tragedia en carretera en Alemania" loading="lazy" class="img-fluid rounded mb-2">
+                                        <h3 class="h6 fw-bold">Tragedia en carretera en Alemania</h3>
+                                        <p class="small text-muted">
+                                            Un grave accidente provoca retrasos masivos y pone en foco la seguridad vial.
+                                        </p>
+                                    </a>
+                                </article>
+                            </section>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+          </main>
+
+                  
+            
+
+     <!-- Footer Global -->
+     <footer class="footer-main"> 
+         <div class="container-fluid footer-content">
               <!-- Derechos reservados -->
-              <small>&copy; 2025 NewsHub. Todos los derechos reservados.</small>
+              <small>&copy; 2026 NewsHub. Todos los derechos reservados.</small>
 
               <!-- Íconos de redes sociales -->
               <div class="social-icons">
-                   <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
-                    <img src="../../../assets/images/iconos/redes/facebook.png" alt="Ir a Facebook de NewsHub">
+                   <a href="https://facebook.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
+                    <i class="bi bi-facebook"></i>
                    </a>
 
-                   <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
-                    <img src="../../../assets/images/iconos/redes/x.png" alt="Ir a X de NewsHub">
+                   <a href="https://twitter.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
+                    <i class="bi bi-twitter-x"></i>
                    </a>
 
-                   <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
-                    <img src="../../../assets/images/iconos/redes/instagram.png" alt="Ir a Instagram de NewsHub">
+                   <a href="https://instagram.com/newshub" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
+                    <i class="bi bi-instagram"></i>
                    </a>
               </div>
 
                  <!-- Enlaces legales -->
                 <div class="footer-links">
-                  <a href="../../legal/privacy.html" title="Política de privacidad">Política de Privacidad</a> |
-                  <a href="../../legal/terms.html" title="Términos de uso">Términos de Uso</a>
-                </div>
-
-                <!-- Atribución de iconos -->
-                <div class="attribution">
-                   <small>
-                    <a href="https://www.flaticon.com/free-icons/instagram" title="Instagram icons" rel="nofollow noopener noreferrer">Instagram icons by Grow studio - Flaticon</a> |
-                    <a href="https://www.flaticon.com/free-icons/facebook" title="Facebook icons" rel="nofollow noopener noreferrer">Facebook icons by Freepik - Flaticon</a> |
-                    <a href="https://www.flaticon.com/free-icons/brands-and-logotypes" title="Brands icons" rel="nofollow noopener noreferrer">Brands icons by Freepik - Flaticon</a>
-                  </small>
+                  <a href="../../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a> |
+                  <a href="../../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
                 </div>
             </div>
-        </footer>
+
+    </footer>
+      
+       <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
