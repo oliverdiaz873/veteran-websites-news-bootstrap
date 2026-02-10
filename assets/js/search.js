@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 searchPath = '../../search/index.html';
             } else if (path.includes('/pages/category/')) {
                 searchPath = '../search/index.html';
+            } else if (path.includes('/pages/opiniones/')) {
+                searchPath = '../search/index.html';
             } else if (path.includes('/pages/legal/')) {
                 searchPath = '../search/index.html';
             } else if (path.includes('/pages/search/')) {
