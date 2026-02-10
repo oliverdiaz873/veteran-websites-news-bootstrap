@@ -76,6 +76,12 @@ body {
     }
 }
 
+.breaking-news a span {
+   font-size: 16px;
+   font-family: 'Arial', sans-serif;
+   font-weight: 600;
+}
+
 /* Featured news section */
 .featured-news {
     background: white;
@@ -199,7 +205,8 @@ body {
 .news-card:hover h3,
 .news-card:hover h4,
 .news-card:hover h5,
-.news-card:hover h6 {
+.news-card:hover h6,
+.featured-article:hover h3 {
     color: #dc3545;
     /* Hover de títulos de tarjetas - rojo */
 }

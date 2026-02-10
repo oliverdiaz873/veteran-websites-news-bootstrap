@@ -43,6 +43,11 @@ body.dark-mode .breadcrumb-item.active {
   color: #adb5bd;
 }
 
+/* Margin para sidebar de noticias individuales - evitar contacto con footer */
+.aside-sidebar {
+  margin-bottom: 2rem;
+}
+
 /* Truncamiento para móviles */
 @media (max-width: 576px) {
   .breadcrumb-item a {

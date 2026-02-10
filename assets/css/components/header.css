@@ -116,6 +116,7 @@ h1 {
 .navbar-brand .logo {
     height: 38px;
     width: 38px;
+    border-radius: 4px;
 }
 
 /* Icono buscador */
