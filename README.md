@@ -56,10 +56,9 @@ This project is part of the **Veteran Websites** series, designed to:
 - Improve responsive web design techniques
 
 ---
-
 ## License
 
 This project is licensed under the MIT License.  
 See the [LICENSE](LICENSE) file for more details.
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
